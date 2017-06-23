@@ -1,0 +1,62 @@
+body {
+  color: orange;
+  margin-top: 0;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: orange;
+}
+
+a:hover {
+  color: red;
+}
+
+.indexcontent {
+  /*background-color: #333;*/
+}
+
+.deal_show {
+    background-color: #333;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.fixed-bg{
+  background-repeat: no-repeat;
+  background: black url('/images/background.jpg');
+  background-attachment: fixed;
+}
+
+.SpaceShips {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+nav {
+  margin-top: 0;
+  background-color: #333;
+  height: 40px;
+}
+nav ul li{
+  padding: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #333;
+}

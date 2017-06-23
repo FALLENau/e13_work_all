@@ -1,0 +1,17 @@
+<form method="post" action="/flight_deals">
+  <label for="flight-select">Flight:</label>
+  <select id="flight-select" name="flight_id">
+    <% @flights.each do |flight| %>
+      <option value=<%= flight.id %>>time: <%= flight.time %> £<%= flight.price %></option>
+    <% end %>
+  </select>
+
+  <label for="deal-selecet">Deal:</label>
+  <select id="deal-select" name="deal_id">
+    <% @deals.each do |deal| %>
+      <option value=<%= deal.id %>><%= deal.name.capitalize%></option>
+    <% end %>
+  </select>
+
+  <input type="submit" value="Submit">
+</form>
