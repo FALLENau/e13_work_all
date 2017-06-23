@@ -19,6 +19,8 @@ class Day
     @id = result.first()['id'].to_i
   end
 
+
+
   def self.all()
   sql = "SELECT * FROM days"
   days_hash = SqlRunner.run(sql)
