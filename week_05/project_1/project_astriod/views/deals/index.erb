@@ -11,18 +11,18 @@
       <th>Price</th>
       <th>Link to deal</th>
     </tr>
-  <% @deals.each do |deal|  %>
-  <tr>
-  <th><%= deal.price_mod %>% off</th>
-  <th><%= deal.name %></th>
-  <th><%= deal.day().name %></th>
-    <% Deal.all_details(deal.id).each do |trip| %>
-      <th><%= trip[:ship].name %></th>
-      <th><%= trip[:flight].time %></th>
-      <th><%= trip[:flight].price %></th>
+    <% @deals.each do |deal|  %>
+      <tr>
+        <th><%= deal.price_mod %>% off</th>
+        <th><%= deal.name %></th>
+        <th><%= deal.day().name %></th>
+      <% Deal.all_details(deal.id).each do |trip| %>
+        <th><%= trip[:ship].name %></th>
+        <th><%= trip[:flight].time %></th>
+        <th><%= trip[:flight].price %></th>
+      <% end %>
+        <th><a href="deals/<%= deal.id %>">SHOW ME THE DEAL</a></th>
+      </tr>
     <% end %>
-    <th><a href="deals/<%= deal.id %>">SHOW ME THE DEAL</a></th>
-  </tr>
-<% end %>
-</table>
+  </table>
 </div>

@@ -1,18 +1,17 @@
 require 'sinatra'
 require 'sinatra/contrib/all'
-require 'pry-byebug'
-require_relative '../models/flight.rb' #why do I need to require deal and ship?
+require_relative '../models/flight.rb'
 require_relative '../models/deal.rb'
 require_relative '../models/ship.rb'
 require_relative '../models/day.rb'
 
-# index
+#INDEX
 get '/flights' do
   @flights = Flight.all()
   erb(:'flights/index')
 end
 
-# add a new deal to a particular flight
+#NEW
 get '/flights/new' do
   @ships = Ship.all
   @flights = Flight.all
