@@ -19,8 +19,4 @@ Possible Extensions:
 	•	Any other ideas you might come up with
 
 Also test place for git block_push
-	1.Git push terminal command removed push action within the .git file: {~ git remote set-url --push origin no_push }
-
-	2.and change? nope! succsess!
-
-	3.repairs: basically I had to revert the .git/hooks folder back to an original state, this was achieved by making a new git init then copying the hooks folder but could be achieved by just changing the file over too{.git/hooks/pre-push.sample}
+	1.git remote set-url --push origin no_push

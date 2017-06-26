@@ -1,18 +1,19 @@
 require 'sinatra'
 require 'sinatra/contrib/all'
+require 'pry-byebug'
 require_relative '../models/deal.rb'
 require_relative '../models/flight.rb'
 require_relative '../models/ship.rb'
 require_relative '../models/day.rb'
 require_relative '../models/flight_deal'
 
-#INDEX
+#INDEX = get '/deals_ect'
 get "/" do
   @deals = Deal.all()
   erb(:"deals/index")
 end
 
-#NEW
+#NEW = gets info from making new deal for admin
 get "/deals/new" do
   @deals = Deal.all
   @days = Day.all
@@ -20,11 +21,12 @@ get "/deals/new" do
   erb(:"deals/new")
 end
 
-#SHOW
+# SHOW works great
 get '/deals/:id' do
   @deal = Deal.find(params["id"].to_i())
   erb(:"deals/show")
 end
+
 
 #CREATE = create new deal by admin
 post "/deals" do #note: changed /deal to /deals

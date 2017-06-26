@@ -1,3 +1,4 @@
+require 'pry-byebug'
 require_relative '../models/deal'
 require_relative '../models/flight'
 require_relative '../models/ship'
@@ -60,8 +61,10 @@ flight_deal1 = FlightDeal.new({ 'flight_id' => flight1.id, 'deal_id' => deal1.id
 flight_deal2 = FlightDeal.new({ 'flight_id' => flight2.id, 'deal_id' => deal2.id })
 flight_deal3 = FlightDeal.new({ 'flight_id' => flight3.id, 'deal_id' => deal3.id })
 flight_deal4 = FlightDeal.new({ 'flight_id' => flight4.id, 'deal_id' => deal4.id })
-
 flight_deal1.save()
 flight_deal2.save()
 flight_deal3.save()
 flight_deal4.save()
+
+# binding.pry
+# nil
