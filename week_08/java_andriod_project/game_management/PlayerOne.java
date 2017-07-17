@@ -1,5 +1,0 @@
-//MainPlayer
-
-public class PlayerOne {
-  
-}
