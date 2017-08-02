@@ -1,0 +1,1999 @@
+
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/QAPage">
+
+<head>
+
+  <title>Auto indent code in Atom editor - Stack Overflow</title>
+  <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+  <link rel="apple-touch-icon image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+  <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="/opensearch.xml">
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:domain" content="stackoverflow.com"/>
+
+  <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded" />
+  <meta name="twitter:title" property="og:title" itemprop="title name" content="Auto indent code in Atom editor" />
+  <meta name="twitter:description" property="og:description" itemprop="description" content="How do you auto-indent your code in the Atom editor. In other editors you can usually select some code and auto-indent the code.
+
+  Is there a keyboard shortcut as well?" />
+  <meta property="og:url" content="https://stackoverflow.com/questions/22611377/auto-indent-code-in-atom-editor"/>
+  <link rel="canonical" href="https://stackoverflow.com/questions/22611377/auto-indent-code-in-atom-editor" />
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.sstatic.net/Js/stub.en.js?v=a3fef38a3bbe"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Sites/stackoverflow/all.css?v=a29b2b0c474b">
+
+  <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;Auto indent code in Atom editor&#39;" href="/feeds/question/22611377">
+  <meta name="twitter:app:country" content="US" />
+  <meta name="twitter:app:name:iphone" content="Stack Exchange iOS" />
+  <meta name="twitter:app:id:iphone" content="871299723" />
+  <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/22611377/auto-indent-code-in-atom-editor" />
+  <meta name="twitter:app:name:ipad" content="Stack Exchange iOS" />
+  <meta name="twitter:app:id:ipad" content="871299723" />
+  <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/22611377/auto-indent-code-in-atom-editor" />
+  <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+  <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/22611377/auto-indent-code-in-atom-editor">
+  <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+  <script>
+
+  StackExchange.ready(function () {
+
+    StackExchange.using("snippets", function () {
+      StackExchange.snippets.initSnippetRenderer();
+    });
+
+
+    StackExchange.using("postValidation", function () {
+      StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+    });
+
+
+    StackExchange.question.init({votesCast:[],autoShowCommentHelp:true,showAnswerHelp:true,totalCommentCount:0,shownCommentCount:0,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:22611377});
+
+    styleCode();
+
+    StackExchange.realtime.subscribeToQuestion('1', '22611377');
+    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text', true); });
+
+  });
+  </script>
+
+
+  <script>
+  StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1495715177,"routeName":"Questions/Show","site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"enableInsertDocLinkDialog":true,"childUrl":"https://meta.stackoverflow.com","enableSocialMediaInSharePopup":true,"protocol":"https"},"user":{"fkey":"650e019ad3f60b04d4790bb714aa760a","rep":1,"isRegistered":true,"userType":3,"userId":7582294,"accountId":10275111,"gravatar":"<div class=\"gravatar-wrapper-32\"><img src=\"https://lh3.googleusercontent.com/-n3gqH712vsc/AAAAAAAAAAI/AAAAAAAAAA0/Ln4JJb4X_RY/photo.jpg?sz=32\" alt=\"\" width=\"32\" height=\"32\"></div>","profileUrl":"https://stackoverflow.com/users/7582294/reece-jones","canSeeDeletedPosts":false,"canSeeNewHeaderDesign":true},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75,"likedTagsMaxLength":300,"dislikedTagsMaxLength":300}}, {"site":{"allowImageUploads":true,"enableUserHovercards":true,"styleCode":true,"enableNewLinkInsertDialog":true,"enableImgurHttps":true,"forceHttpsImages":true},"comments":{},"userProfile":{"openGraphAPIKey":"58740831ad23540e00c58987"},"tags":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"snippets":{"snippetsEnabled":true,"renderDomain":"stacksnippets.net"},"markdown":{"asteriskIntraWordEmphasis":true},"monitoring":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000}});
+  StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"0ae650cbd905","js/moderator.en.js":"813e402c1645","js/full-anon.en.js":"e2bdeba58a56","js/full.en.js":"7280694d7d9b","js/wmd.en.js":"8e7cf8c19d79","js/third-party/jquery.autocomplete.min.js":"d3b8fa7fdf74","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"cd655e38a168","js/help.en.js":"dbd4f489eff2","js/tageditor.en.js":"235a2acc7d79","js/tageditornew.en.js":"4a183c2cb7ae","js/inline-tag-editing.en.js":"7581a98341e4","js/revisions.en.js":"47de10a8358f","js/review.en.js":"27b7cd79d0b0","js/tagsuggestions.en.js":"b278f9a0b23b","js/post-validation.en.js":"4970f20f3873","js/explore-qlist.en.js":"e71f14781288","js/events.en.js":"300f396911ff","js/keyboard-shortcuts.en.js":"597cbd90d68f","js/external-editor.en.js":"fc9efaebc4b7","js/adops.en.js":"9a6a7812a212","js/external-editor.en.js":"fc9efaebc4b7","js/snippet-javascript.en.js":"8949a8564319","js/snippet-javascript-codemirror.en.js":"f188606acb47"});
+  StackExchange.using("gps", function() {
+    StackExchange.gps.init(true);
+  });
+  </script>
+
+  <noscript id="noscript-css"><style type="text/css">body,.so-header{margin-top:1.9em}</style></noscript>
+</head>
+<body class="question-page new-topbar">
+  <script>(function () { var old = $.fn.contents; $.fn.contents = function () { try { return old.apply(this, arguments); } catch (e) { return $([]); } } })()</script>
+  <iframe id="adzerk-user-match" width="0" height="0" frameborder="0" scrolling="no" onload="window.AUMIframeDone=true"
+  src="https://ssum-sec.casalemedia.com/usermatch?s=183712&amp;cb=https%3A%2F%2Fengine.adzerk.net%2Fudb%2F22%2Fsync%2Fi.gif%3FpartnerId%3D1%26userId%3D"
+  style="display: none;" marginheight="0" marginwidth="0"></iframe>
+
+  <div id="notify-container"></div>
+  <div id="custom-header"></div>
+
+
+  <header class="so-header js-so-header _fixed">
+    <div class="-container">
+      <div class="-main">
+        <a href="https://stackoverflow.com" class="-logo js-gps-track _glyph"
+        data-gps-track="top_nav.click({is_current:false, location:2, destination:8})">
+
+        <span class="-img">Stack Overflow</span>
+      </a>
+
+      <nav class="navigation" role="navigation" aria-label="site navigation">
+        <ol class="-list">
+          <li class="-item _current">
+            <a id="nav-questions" href="/questions" class="-link js-gps-track"
+            data-gps-track="top_nav.click({is_current:true, location:2, destination:1})">Questions</a>
+          </li>
+
+          <li class="-item">
+            <a id="nav-jobs" href="/jobs?med=site-ui&amp;ref=jobs-tab" class="-link js-gps-track"
+            data-gps-track="top_nav.click({is_current:false, location:2, destination:6})">Jobs</a>
+          </li>
+          <li class="-item">
+            <a id="nav-docs" href="/documentation" class="-link js-gps-track"
+            data-gps-track="top_nav.click({is_current:false, location:2, destination:7})">Documentation <small class='beta-badge'>beta</small></a>
+          </li>
+          <li class="-item">
+            <a id="nav-tags" href="/tags" class="-link js-gps-track"
+            data-gps-track="top_nav.click({is_current:false, location:2, destination:2})">Tags</a>
+          </li>
+
+          <li class="-item">
+            <a id="nav-users" href="/users" class="-link js-gps-track"
+            data-gps-track="top_nav.click({is_current:false, location:2, destination:3})">Users</a>
+          </li>
+
+        </ol>
+      </nav>
+
+      <form id="search" action="/search" method="get" class="searchbar" autocomplete="off" role="search">
+        <svg role="icon" class="svg-icon iconSearch" width="18" height="18" viewBox="0 0 18 18"><path d="M12.864 11.321L18 16.5 16.5 18l-5.178-5.136v-.357a7 7 0 1 1 1.186-1.186h.356zM7 12A5 5 0 1 0 7 2a5 5 0 0 0 0 10z"/></svg>
+        <input name="q" type="text" placeholder="Search..." value="" tabindex="1" autocomplete="off" maxlength="240" class="f-input js-search-field" />
+        <button type="submit" class="btn js-search-submit">
+          <svg role="icon" class="svg-icon iconSearch" width="18" height="18" viewBox="0 0 18 18"><path d="M12.864 11.321L18 16.5 16.5 18l-5.178-5.136v-.357a7 7 0 1 1 1.186-1.186h.356zM7 12A5 5 0 1 0 7 2a5 5 0 0 0 0 10z"/></svg>
+        </button>
+      </form>
+
+    </div>
+
+
+
+
+
+    <div class="-actions">
+      <a href="/users/7582294/reece-jones" class="my-profile js-gps-track" data-gps-track="profile_summary.click()">
+        <div class="gravatar-wrapper-24" title="Reece Jones"><img src="https://lh3.googleusercontent.com/-n3gqH712vsc/AAAAAAAAAAI/AAAAAAAAAA0/Ln4JJb4X_RY/photo.jpg?sz=48" alt="" width="24" height="24" class="-avatar js-avatar-me"></div>
+
+
+        <div class="-rep js-header-rep" title="your reputation: 1">1</div>
+
+        <div class="-badges">
+          <span title="1 bronze badge"><span class="badge3">&#9679;</span><span class="badgecount">1</span></span>
+        </div>
+      </a>
+      <nav class="secondary-nav">
+        <div class="-dialog-container js-topbar-dialog-corral">
+
+
+          <div class="topbar-dialog siteSwitcher-dialog dno">
+            <div class="header">
+              <h3><a href="https://stackoverflow.com">current community</a>
+              </h3>
+            </div>
+            <div class="modal-content current-site-container">
+              <ul class="current-site">
+                <li>
+                  <div class="related-links">
+                    <a href="https://stackoverflow.com/help" class="js-gps-track"     data-gps-track="site_switcher.click({ item_type:14 })"
+                    >help</a>
+                    <a href="https://chat.stackoverflow.com" class="js-gps-track"     data-gps-track="site_switcher.click({ item_type:6 })"
+                    >chat</a>
+                    <a href="https://stackoverflow.com/users/logout" class="js-gps-track"     data-gps-track="site_switcher.click({ item_type:8 })"
+                    >log out</a>
+                  </div>
+
+                  <a href="https://stackoverflow.com"
+                  class="current-site-link site-link js-gps-track"
+                  data-id="1"
+                  data-gps-track="site_switcher.click({ item_type:3 })">
+                  <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+                  Stack Overflow
+                </a>
+
+              </li>
+              <li class="related-site">
+                <div class="L-shaped-icon-container">
+                  <span class="L-shaped-icon"></span>
+                </div>
+
+
+                <a href="https://meta.stackoverflow.com"
+                class="site-link js-gps-track"
+                data-id="552"
+                data-gps-track="site.switch({ target_site:552, item_type:3 }),site_switcher.click({ item_type:4 })">
+                <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+                Meta Stack Overflow
+              </a>
+
+            </li>
+          </ul>
+        </div>
+
+        <div class="header" id="your-communities-header">
+          <h3>
+            <a href="https://stackexchange.com/users/10275111/?tab=accounts">your communities</a>
+          </h3>
+
+          <a href="#" id="edit-pinned-sites">edit</a>
+          <a href="#" id="cancel-pinned-sites" style="display: none;">cancel</a>
+        </div>
+        <div class="modal-content" id="your-communities-section">
+
+          <ul class="my-sites">
+            <li>
+
+              <a href="https://stackoverflow.com"
+              class="site-link js-gps-track"
+              data-id="1"
+              data-gps-track="site.switch({ target_site:1, item_type:3 }),site_switcher.click({ item_type:1 })">
+              <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+              Stack Overflow
+              <span class="rep-score">1</span>
+            </a>
+
+          </li>
+        </ul>
+        <div class="pinned-site-editor-container" style="display: none;">
+          <input id="js-site-search-txt"
+          type="text"
+          class="site-filter-input"
+          value=""
+          placeholder="Add a Stack Exchange community"/>
+          <input type="submit" id="pin-site-btn" value="Add" disabled="disabled"/>
+          <ul class="js-found-sites found-sites"></ul>
+          <ul class="pinned-site-list sortable" data-custom-list="False">
+          </ul>
+          <input type="submit" value="Save" id="save-pinned-sites-btn" disabled="disabled"/>
+          <a href="#" id="reset-pinned-sites">reset to default list</a>
+        </div>
+      </div>
+
+      <div class="header">
+        <h3><a href="https://stackexchange.com/sites">more stack exchange communities</a>
+        </h3>
+        <a href="https://stackoverflow.blog" class="fr">company blog</a>
+      </div>
+      <div class="modal-content">
+        <div class="child-content"></div>
+      </div>
+    </div>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+      <div class="modal-content">
+        <ul>
+          <li>
+            <a href="/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+              Tour
+              <span class="item-summary">
+                Start here for a quick overview of the site
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+              Help Center
+              <span class="item-summary">
+                Detailed answers to any questions you might have
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://meta.stackoverflow.com" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+              Meta
+              <span class="item-summary">
+                Discuss the workings and policies of this site
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+              About Us
+              <span class="item-summary">
+                Learn more about Stack Overflow the company
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.stackoverflowbusiness.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+              Business
+              <span class="item-summary">
+                Learn more about hiring developers or posting ads with us
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <ol class="-list">
+    <li class="-item">
+      <a href="#" class="-link js-inbox-button" title="Recent inbox messages">
+        <svg role="icon" class="svg-icon iconInbox" width="20" height="18" viewBox="0 0 20 18"><path d="M15.19 1H4.63a1.92 1.92 0 0 0-1.85 1.35L0 10.79V15a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4.21l-2.87-8.44A2 2 0 0 0 15.19 1zm-.28 10l-2 2h-6l-2-2H1.96L4.4 3.68A1 1 0 0 1 5.35 3h9.12a1 1 0 0 1 .95.68L17.86 11h-2.95z"/></svg>
+        <span class="indicator-badge js-unread-count _important" style="display: none;"></span>
+      </a>
+    </li>
+    <li class="-item">
+      <a href="#" class="-link js-achievements-button _highlighted-positive" title="You have new achievements" data-unread-class="_highlighted-positive">
+        <svg role="icon" class="svg-icon iconAchievements" width="18" height="18" viewBox="0 0 18 18"><path d="M15 2V1H3v1H0v4c0 1.6 1.4 3 3 3v1c.4 1.5 3 2.6 5 3v2H5s-1 1.5-1 2h10c0-.4-1-2-1-2h-3v-2c2-.4 4.6-1.5 5-3V9c1.6-.2 3-1.4 3-3V2h-3zM3 7c-.5 0-1-.5-1-1V4h1v3zm8.4 2.5L9 8 6.6 9.4l1-2.7L5 5h3l1-2.7L10 5h2.8l-2.3 1.8 1 2.7h-.1zM16 6c0 .5-.5 1-1 1V4h1v2z"/></svg>
+        <span class="indicator-badge js-unread-count _positive" style="display: none;"></span>
+      </a>
+    </li>
+
+
+    <li class="-item"><a href="#" class="-link js-help-button" title="Help Center and other resources">
+      <svg role="icon" class="svg-icon iconHelp" width="18" height="18" viewBox="0 0 18 18"><path d="M9 1a8 8 0 1 0 0 16.001A8 8 0 0 0 9 1zm.812 12.126c-.02.716-.55 1.157-1.238 1.137-.659-.02-1.177-.49-1.157-1.209.02-.715.566-1.17 1.225-1.15.691.021 1.194.507 1.17 1.222zm1.956-5.114c-.168.237-.546.542-1.02.912l-.527.361c-.257.197-.417.43-.502.695-.044.141-.076.507-.084.752-.004.048-.032.156-.181.156H7.883c-.165 0-.185-.096-.18-.144.023-.667.12-1.218.397-1.66.374-.594 1.426-1.221 1.426-1.221.161-.12.286-.25.382-.39.177-.24.321-.51.321-.8 0-.333-.08-.65-.293-.915-.249-.31-.518-.458-1.036-.458-.51 0-.808.257-1.021.594-.213.338-.177.735-.177 1.097H5.746c0-1.366.357-2.238 1.112-2.752.51-.35 1.162-.502 1.921-.502.996 0 1.788.184 2.487.715.647.49.988 1.181.988 2.113 0 .575-.2 1.057-.486 1.447z"/></svg>
+    </a></li>
+    <li class="-item">
+      <a href="https://stackexchange.com" class="-link js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 167 Stack Exchange sites">
+        <svg role="icon" class="svg-icon iconStackExchange" width="18" height="18" viewBox="0 0 18 18"><path d="M1 13a2 2 0 0 0 2 2h8v3l3-3h1a2 2 0 0 0 2-2v-2H1v2zM15 1H3a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2zM1 6h16v4H1V6z"/></svg>
+      </a>
+    </li>
+
+
+  </ol>
+</nav>
+</div>
+</div>
+</header>
+
+<script>
+StackExchange.ready(function () { StackExchange.topbar.init(); });
+StackExchange.scrollPadding.setPaddingTop(60, 10);     </script>
+
+<div class="container">
+
+
+
+  <div id="content" class="snippet-hidden">
+
+
+
+
+
+    <div itemscope itemtype="http://schema.org/Question">
+      <link itemprop="image" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+      <div id="question-header">
+        <h1 itemprop="name"><a href="/questions/22611377/auto-indent-code-in-atom-editor" class="question-hyperlink">Auto indent code in Atom editor</a></h1>
+
+
+        <div class="aside-cta" role="navigation" aria-label="ask new question">
+          <a href="/questions/ask" class="btn">Ask Question</a>
+        </div>
+      </div>
+      <div id="mainbar" role="main" aria-label="question and answers">
+
+
+
+        <div class="question" data-questionid="22611377"  id="question">
+
+          <div class="everyonelovesstackoverflow" id="clc-tlb"></div>    <table>
+            <tr>
+              <td class="votecell">
+
+
+                <div class="vote">
+                  <input type="hidden" name="_id_" value="22611377">
+                  <a class="vote-up-off" title="This question shows research effort; it is useful and clear (click again to undo)">up vote</a>
+                  <span itemprop="upvoteCount" class="vote-count-post ">241</span>
+                  <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful (click again to undo)">down vote</a>
+
+                  <a class="star-off" href="#">favorite</a>
+                  <div class="favoritecount"><b>49</b></div>
+
+
+                </div>
+
+              </td>
+
+              <td class="postcell">
+                <div>
+                  <div class="post-text" itemprop="text">
+
+                    <p>How do you auto-indent your code in the Atom editor. In other editors you can usually select some code and auto-indent the code. </p>
+
+                    <p>Is there a keyboard shortcut as well?</p>
+                  </div>
+                  <div class="post-taglist">
+                    <a href="/questions/tagged/code-formatting" class="post-tag" title="show questions tagged &#39;code-formatting&#39;" rel="tag">code-formatting</a> <a href="/questions/tagged/atom-editor" class="post-tag" title="show questions tagged &#39;atom-editor&#39;" rel="tag">atom-editor</a> <a href="/questions/tagged/auto-indent" class="post-tag" title="show questions tagged &#39;auto-indent&#39;" rel="tag">auto-indent</a>
+                  </div>
+                  <table class="fw">
+                    <tr>
+                      <td class="vt">
+                        <div class="post-menu"><a href="/q/22611377/7582294" title="short permalink to this question" class="short-link" id="link-post-22611377">share</a><span class="lsep">|</span><a href="/posts/22611377/edit" class="suggest-edit-post" title="revise and improve this post">edit</a></div>
+                      </td>
+                      <td align="right" class="post-signature">
+                        <div class="user-info user-hover">
+                          <div class="user-action-time">
+                            <a href="/posts/22611377/revisions" title="show all edits to this post">edited <span title="2016-03-10 10:29:44Z" class="relativetime">Mar 10 '16 at 10:29</span></a>
+                          </div>
+                          <div class="user-gravatar32">
+                            <a href="/users/3576214/damjan-pavlica"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/d2c5a0f2653e7d11d518b584f4c46536?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+                          </div>
+                          <div class="user-details">
+                            <a href="/users/3576214/damjan-pavlica">Damjan Pavlica</a>
+                            <div class="-flair">
+                              <span class="reputation-score" title="reputation score " dir="ltr">2,653</span><span title="14 silver badges"><span class="badge2"></span><span class="badgecount">14</span></span><span title="38 bronze badges"><span class="badge3"></span><span class="badgecount">38</span></span>
+                            </div>
+                          </div>
+                        </div>    </td>
+                        <td class="post-signature owner">
+                          <div class="user-info user-hover">
+                            <div class="user-action-time">
+                              asked <span title="2014-03-24 13:52:32Z" class="relativetime">Mar 24 '14 at 13:52</span>
+                            </div>
+                            <div class="user-gravatar32">
+                              <a href="/users/388573/anders"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/097f9f15bb97c2d6b8392f1858a7d8a8?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+                            </div>
+                            <div class="user-details">
+                              <a href="/users/388573/anders">Anders</a>
+                              <div class="-flair">
+                                <span class="reputation-score" title="reputation score " dir="ltr">2,998</span><span title="7 gold badges"><span class="badge1"></span><span class="badgecount">7</span></span><span title="19 silver badges"><span class="badge2"></span><span class="badgecount">19</span></span><span title="29 bronze badges"><span class="badge3"></span><span class="badgecount">29</span></span>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="votecell"></td>
+                <td>
+                  <div id="comments-22611377" class="comments  dno">
+                    <table>
+                      <tbody data-remaining-comments-count="0"
+                      data-canpost="false"
+                      data-cansee="true"
+                      data-comments-unavailable="false"
+                      data-addlink-disabled="true">
+
+                      <tr><td></td><td></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div id="comments-link-22611377" data-rep=50 data-reg=true>
+
+                  <a class="js-add-link comments-link disabled-link "
+                  title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments."
+                  >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+                  <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+                </div>
+              </td>
+            </tr>        </table>
+          </div>
+
+          <div id="answers">
+
+            <a name="tab-top"></a>
+            <div id="answers-header">
+              <div class="subheader answers-subheader">
+                <h2>
+                  7 Answers
+                  <span style="display:none;" itemprop="answerCount">7</span>
+                </h2>
+                <div>
+                  <div id="tabs">
+                    <a href="/questions/22611377/auto-indent-code-in-atom-editor?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+                      active</a>
+                      <a href="/questions/22611377/auto-indent-code-in-atom-editor?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+                        oldest</a>
+                        <a class="youarehere" href="/questions/22611377/auto-indent-code-in-atom-editor?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+                          votes</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+
+                  <a name="22661340"></a>
+                  <div id="answer-22661340" class="answer accepted-answer" data-answerid="22661340"  itemscope itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+                    <table>
+                      <tr>
+                        <td class="votecell">
+
+
+                          <div class="vote">
+                            <input type="hidden" name="_id_" value="22661340">
+                            <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+                            <span itemprop="upvoteCount" class="vote-count-post ">417</span>
+                            <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+
+
+
+                            <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+
+                          </div>
+
+                        </td>
+
+
+
+                        <td class="answercell">
+                          <div class="post-text" itemprop="text">
+                            <p>I found the option in the menu, under Edit > Lines > Auto Indent. It doesn't seem to have a default keymap bound.</p>
+
+                            <p>You could try to add a key mapping (Atom > Open Your Keymap [on Windows: File > Settings > Keybindings > "your keymap file"]) like this one:</p>
+
+                            <pre><code>'atom-text-editor':
+                              'cmd-alt-l': 'editor:auto-indent'
+                            </code></pre>
+
+                            <p>It worked for me :)</p>
+
+                            <hr>
+
+                            <p>For Windows:</p>
+
+                            <pre><code>'atom-text-editor':
+                              'ctrl-alt-l': 'editor:auto-indent'
+                            </code></pre>
+                          </div>
+                          <table class="fw">
+                            <tr>
+                              <td class="vt">
+                                <div class="post-menu"><a href="/a/22661340/7582294" title="short permalink to this answer" class="short-link" id="link-post-22661340">share</a><span class="lsep">|</span><a href="/posts/22661340/edit" class="suggest-edit-post" title="revise and improve this post">edit</a></div>                    </td>
+                                <td align="right" class="post-signature">
+                                  <div class="user-info ">
+                                    <div class="user-action-time">
+                                      <a href="/posts/22661340/revisions" title="show all edits to this post">edited <span title="2016-05-16 10:09:01Z" class="relativetime">May 16 '16 at 10:09</span></a>
+                                    </div>
+                                    <div class="user-gravatar32">
+                                      <a href="/users/3001704/chetan92"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/4eT8C.png?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+                                    </div>
+                                    <div class="user-details">
+                                      <a href="/users/3001704/chetan92">chetan92</a>
+                                      <div class="-flair">
+                                        <span class="reputation-score" title="reputation score " dir="ltr">546</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
+                                      </div>
+                                    </div>
+                                  </div>    </td>
+
+
+
+                                  <td align="right" class="post-signature">
+
+
+                                    <div class="user-info user-hover">
+                                      <div class="user-action-time">
+                                        answered <span title="2014-03-26 12:39:15Z" class="relativetime">Mar 26 '14 at 12:39</span>
+                                      </div>
+                                      <div class="user-gravatar32">
+                                        <a href="/users/523664/nacho-l"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/17929b6633e58365f9a5f0d920155c3a?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+                                      </div>
+                                      <div class="user-details">
+                                        <a href="/users/523664/nacho-l">Nacho L.</a>
+                                        <div class="-flair">
+                                          <span class="reputation-score" title="reputation score " dir="ltr">6,402</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="18 silver badges"><span class="badge2"></span><span class="badgecount">18</span></span><span title="23 bronze badges"><span class="badge3"></span><span class="badgecount">23</span></span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td class="votecell"></td>
+                            <td>
+                              <div id="comments-22661340" class="comments ">
+                                <table>
+                                  <tbody data-remaining-comments-count="2"
+                                  data-canpost="false"
+                                  data-cansee="true"
+                                  data-comments-unavailable="false"
+                                  data-addlink-disabled="true">
+
+
+
+                                  <tr id="comment-36321331" class="comment ">
+                                    <td class="comment-actions">
+                                      <table>
+                                        <tbody>
+                                          <tr>
+                                            <td class=" comment-score">
+                                              <span title="number of &#39;useful comment&#39; votes received"
+                                              class="cool">1</span>
+                                            </td>
+                                            <td>
+                                              &nbsp;
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                    <td class="comment-text">
+                                      <div style="display: block;" class="comment-body">
+                                        <span class="comment-copy">Thank you! Would be nice if it did a core:select-all right before, but no clue on how to script that.</span>
+                                        &ndash;&nbsp;<a href="/users/1456184/doobdargent"
+                                        title="475 reputation"
+                                        class="comment-user">doobdargent</a>
+                                        <span class="comment-date" dir="ltr"><span title="2014-05-14 08:38:01Z" class="relativetime-clean">May 14 '14 at 8:38</span></span>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr id="comment-37847739" class="comment ">
+                                    <td class="comment-actions">
+                                      <table>
+                                        <tbody>
+                                          <tr>
+                                            <td class=" comment-score">
+                                              <span title="number of &#39;useful comment&#39; votes received"
+                                              class="cool">3</span>
+                                            </td>
+                                            <td>
+                                              &nbsp;
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                    <td class="comment-text">
+                                      <div style="display: block;" class="comment-body">
+                                        <span class="comment-copy">@doobdargent I created a question with an answer on how to compose two commands into a new command here: <a href="http://stackoverflow.com/questions/24456995/how-do-i-write-a-custom-command-in-atom/24456996" title="how do i write a custom command in atom">stackoverflow.com/questions/24456995/&hellip;</a></span>
+                                        &ndash;&nbsp;<a href="/users/1954/lee"
+                                        title="12,953 reputation"
+                                        class="comment-user">Lee</a>
+                                        <span class="comment-date" dir="ltr"><span title="2014-06-27 16:50:23Z" class="relativetime-clean">Jun 27 '14 at 16:50</span></span>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr id="comment-51343356" class="comment ">
+                                    <td>
+                                      <table>
+                                        <tbody>
+                                          <tr>
+                                            <td class=" comment-score">
+                                              &nbsp;&nbsp;
+                                            </td>
+                                            <td>
+                                              &nbsp;
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                    <td class="comment-text">
+                                      <div style="display: block;" class="comment-body">
+                                        <span class="comment-copy">I think me keymap stopped working after some upgrade. Had to change <code>.atom-text-editor</code> to <code>atom-text-editor</code> (remove class dot)</span>
+                                        &ndash;&nbsp;<a href="/users/56686/mattias-wadman"
+                                        title="8,219 reputation"
+                                        class="comment-user">Mattias Wadman</a>
+                                        <span class="comment-date" dir="ltr"><span title="2015-07-29 13:48:17Z" class="relativetime-clean">Jul 29 '15 at 13:48</span></span>
+                                        <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr id="comment-53621672" class="comment ">
+                                    <td class="comment-actions">
+                                      <table>
+                                        <tbody>
+                                          <tr>
+                                            <td class=" comment-score">
+                                              <span title="number of &#39;useful comment&#39; votes received"
+                                              class="warm">7</span>
+                                            </td>
+                                            <td>
+                                              &nbsp;
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                    <td class="comment-text">
+                                      <div style="display: block;" class="comment-body">
+                                        <span class="comment-copy">You can also <code>cmd + shift + p</code> and search for <code>Editor: Auto Indent</code></span>
+                                        &ndash;&nbsp;<a href="/users/1988272/codingninja"
+                                        title="300 reputation"
+                                        class="comment-user">codingninja</a>
+                                        <span class="comment-date" dir="ltr"><span title="2015-10-01 20:20:58Z" class="relativetime-clean">Oct 1 '15 at 20:20</span></span>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr id="comment-55616292" class="comment ">
+                                    <td class="comment-actions">
+                                      <table>
+                                        <tbody>
+                                          <tr>
+                                            <td class=" comment-score">
+                                              <span title="number of &#39;useful comment&#39; votes received"
+                                              class="cool">1</span>
+                                            </td>
+                                            <td>
+                                              &nbsp;
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                    <td class="comment-text">
+                                      <div style="display: block;" class="comment-body">
+                                        <span class="comment-copy">I figured out a way to bind this approach with &quot;Select All&quot; first (and then restore the original selection after), so you can do it all in one key press -- see my answer below. <a href="http://stackoverflow.com/a/33927654/398630">stackoverflow.com/a/33927654/398630</a></span>
+                                        &ndash;&nbsp;<a href="/users/398630/brainslugs83"
+                                        title="3,207 reputation"
+                                        class="comment-user">BrainSlugs83</a>
+                                        <span class="comment-date" dir="ltr"><span title="2015-11-25 22:39:37Z" class="relativetime-clean">Nov 25 '15 at 22:39</span></span>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+
+                            <div id="comments-link-22661340" data-rep=50 data-reg=true>
+
+                              <a class="js-add-link comments-link  dno"
+                              title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                              ></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+                              <a class="js-show-link comments-link " title="expand to show all comments on this post" href=# onclick="">show <b>2</b> more comments</a>
+                            </div>
+                          </td>
+                        </tr>    </table>
+                      </div>
+                      <div class="everyonelovesstackoverflow" id="clc-mlb"></div>
+
+                      <a name="33927654"></a>
+                      <div id="answer-33927654" class="answer" data-answerid="33927654"  itemscope itemtype="http://schema.org/Answer">
+                        <table>
+                          <tr>
+                            <td class="votecell">
+
+
+                              <div class="vote">
+                                <input type="hidden" name="_id_" value="33927654">
+                                <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+                                <span itemprop="upvoteCount" class="vote-count-post ">53</span>
+                                <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+
+
+
+
+                              </div>
+
+                            </td>
+
+
+
+                            <td class="answercell">
+                              <div class="post-text" itemprop="text">
+                                <p>The accepted answer works, but you have to do a "Select All" first -- every time -- and I'm way too lazy for that.</p>
+
+                                <p>And it turns out, it's not super trivial -- I figured I'd post this here in an attempt to save like-minded individuals the 30 minutes it takes to track all this down. -- Also note: this approach restores the original selection when it's done (and it happens so fast, you don't even notice the selection was ever changed).</p>
+
+                                <p>1.) First, add a custom command to your init script (File->Open Your Init Script, then paste this at the bottom):</p>
+
+                                <pre><code>atom.commands.add 'atom-text-editor', 'custom:reformat', -&gt;
+                                  editor = atom.workspace.getActiveTextEditor();
+                                  oldRanges = editor.getSelectedBufferRanges();
+                                  editor.selectAll();
+                                  atom.commands.dispatch(atom.views.getView(editor), 'editor:auto-indent')
+                                  editor.setSelectedBufferRanges(oldRanges);
+                                </code></pre>
+
+                                <p>2.) Bind "custom:reformat" to a key (File->Open Your Keymap, then paste this at the bottom):</p>
+
+                                <pre><code>'atom-text-editor':
+                                  'ctrl-alt-d': 'custom:reformat'
+                                </code></pre>
+
+                                <p>3.) Restart Atom (the init.coffee script only runs when atom is first launched).</p>
+                              </div>
+                              <table class="fw">
+                                <tr>
+                                  <td class="vt">
+                                    <div class="post-menu"><a href="/a/33927654/7582294" title="short permalink to this answer" class="short-link" id="link-post-33927654">share</a><span class="lsep">|</span><a href="/posts/33927654/edit" class="suggest-edit-post" title="revise and improve this post">edit</a></div>                    </td>
+
+
+
+                                    <td align="right" class="post-signature">
+
+
+                                      <div class="user-info user-hover">
+                                        <div class="user-action-time">
+                                          answered <span title="2015-11-25 22:38:12Z" class="relativetime">Nov 25 '15 at 22:38</span>
+                                        </div>
+                                        <div class="user-gravatar32">
+                                          <a href="/users/398630/brainslugs83"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/8ac777cca059f2e12510475f85dcc19a?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+                                        </div>
+                                        <div class="user-details">
+                                          <a href="/users/398630/brainslugs83">BrainSlugs83</a>
+                                          <div class="-flair">
+                                            <span class="reputation-score" title="reputation score " dir="ltr">3,207</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="28 silver badges"><span class="badge2"></span><span class="badgecount">28</span></span><span title="30 bronze badges"><span class="badge3"></span><span class="badgecount">30</span></span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td class="votecell"></td>
+                              <td>
+                                <div id="comments-33927654" class="comments ">
+                                  <table>
+                                    <tbody data-remaining-comments-count="0"
+                                    data-canpost="false"
+                                    data-cansee="true"
+                                    data-comments-unavailable="false"
+                                    data-addlink-disabled="true">
+
+
+
+                                    <tr id="comment-55974076" class="comment ">
+                                      <td>
+                                        <table>
+                                          <tbody>
+                                            <tr>
+                                              <td class=" comment-score">
+                                                &nbsp;&nbsp;
+                                              </td>
+                                              <td>
+                                                &nbsp;
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                      <td class="comment-text">
+                                        <div style="display: block;" class="comment-body">
+                                          <span class="comment-copy">Interesting. I&#39;m not sure I&#39;d want it to automatically auto indent everything though. The built-in allows for indenting the selection. You could argue, that proper indentation is always something, that should be had.</span>
+                                          &ndash;&nbsp;<a href="/users/1829329/zelphir"
+                                          title="911 reputation"
+                                          class="comment-user">Zelphir</a>
+                                          <span class="comment-date" dir="ltr"><span title="2015-12-05 23:28:33Z" class="relativetime-clean">Dec 5 '15 at 23:28</span></span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr id="comment-56562870" class="comment ">
+                                      <td class="comment-actions">
+                                        <table>
+                                          <tbody>
+                                            <tr>
+                                              <td class=" comment-score">
+                                                <span title="number of &#39;useful comment&#39; votes received"
+                                                class="cool">1</span>
+                                              </td>
+                                              <td>
+                                                &nbsp;
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                      <td class="comment-text">
+                                        <div style="display: block;" class="comment-body">
+                                          <span class="comment-copy">@Zelphir I usually have one keybinding for indent selection, and another keybinding for indent all. -- I don&#39;t use indent all as often, but it&#39;s nice to have it when you need it.</span>
+                                          &ndash;&nbsp;<a href="/users/398630/brainslugs83"
+                                          title="3,207 reputation"
+                                          class="comment-user">BrainSlugs83</a>
+                                          <span class="comment-date" dir="ltr"><span title="2015-12-22 07:51:42Z" class="relativetime-clean">Dec 22 '15 at 7:51</span></span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr id="comment-56582628" class="comment ">
+                                      <td>
+                                        <table>
+                                          <tbody>
+                                            <tr>
+                                              <td class=" comment-score">
+                                                &nbsp;&nbsp;
+                                              </td>
+                                              <td>
+                                                &nbsp;
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                      <td class="comment-text">
+                                        <div style="display: block;" class="comment-body">
+                                          <span class="comment-copy">@BrainSlugs83 Maybe a little bit offtopic: I&#39;ve noticed that there is a problem when trying to auto indent languages, which don&#39;t use braces to mark blocks of code and allow to define functions or classes within others. The editor can&#39;t know what is on which level in those cases.</span>
+                                          &ndash;&nbsp;<a href="/users/1829329/zelphir"
+                                          title="911 reputation"
+                                          class="comment-user">Zelphir</a>
+                                          <span class="comment-date" dir="ltr"><span title="2015-12-22 16:47:32Z" class="relativetime-clean">Dec 22 '15 at 16:47</span></span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr id="comment-62374291" class="comment ">
+                                      <td class="comment-actions">
+                                        <table>
+                                          <tbody>
+                                            <tr>
+                                              <td class=" comment-score">
+                                                <span title="number of &#39;useful comment&#39; votes received"
+                                                class="cool">1</span>
+                                              </td>
+                                              <td>
+                                                &nbsp;
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                      <td class="comment-text">
+                                        <div style="display: block;" class="comment-body">
+                                          <span class="comment-copy"><code>if oldRanges != null &amp;&amp; oldRanges[0].start.column == oldRanges[0].end.column &amp;&amp; oldRanges[0].start.row == oldRanges[0].end.row</code> adding this condition to <code>editor.selectAll();</code> will still allow indenting only the selection. If there is no selection, it will indent the entire file.</span>
+                                          &ndash;&nbsp;<a href="/users/518493/manish-s"
+                                          title="2,329 reputation"
+                                          class="comment-user">manish_s</a>
+                                          <span class="comment-date" dir="ltr"><span title="2016-05-25 11:28:31Z" class="relativetime-clean">May 25 '16 at 11:28</span></span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr id="comment-63775401" class="comment ">
+                                      <td>
+                                        <table>
+                                          <tbody>
+                                            <tr>
+                                              <td class=" comment-score">
+                                                &nbsp;&nbsp;
+                                              </td>
+                                              <td>
+                                                &nbsp;
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                      <td class="comment-text">
+                                        <div style="display: block;" class="comment-body">
+                                          <span class="comment-copy">@Zelphir sounds like a bug in the editor to me. :-)</span>
+                                          &ndash;&nbsp;<a href="/users/398630/brainslugs83"
+                                          title="3,207 reputation"
+                                          class="comment-user">BrainSlugs83</a>
+                                          <span class="comment-date" dir="ltr"><span title="2016-07-03 20:31:46Z" class="relativetime-clean">Jul 3 '16 at 20:31</span></span>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+
+                              <div id="comments-link-33927654" data-rep=50 data-reg=true>
+
+                                <a class="js-add-link comments-link disabled-link "
+                                title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                                >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+                                <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+                              </div>
+                            </td>
+                          </tr>    </table>
+                        </div>
+
+
+                        <a name="26493349"></a>
+                        <div id="answer-26493349" class="answer" data-answerid="26493349"  itemscope itemtype="http://schema.org/Answer">
+                          <table>
+                            <tr>
+                              <td class="votecell">
+
+
+                                <div class="vote">
+                                  <input type="hidden" name="_id_" value="26493349">
+                                  <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+                                  <span itemprop="upvoteCount" class="vote-count-post ">29</span>
+                                  <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+
+
+
+
+                                </div>
+
+                              </td>
+
+
+
+                              <td class="answercell">
+                                <div class="post-text" itemprop="text">
+                                  <p>Package auto-indent exists to apply auto-indent to <a href="https://github.com/griiin/atom-auto-indent/blob/master/lib/auto-indent.coffee">entire file</a> with <a href="https://github.com/griiin/atom-auto-indent/blob/master/keymaps/auto-indent.cson">this shortcuts</a> :</p>
+
+                                  <blockquote>
+                                    <p>ctrl+shift+i</p>
+                                  </blockquote>
+
+                                  <p>or</p>
+
+                                  <blockquote>
+                                    <p>cmd+shift+i</p>
+                                  </blockquote>
+
+                                  <p>Package url : atom.io/packages/auto-indent</p>
+                                </div>
+                                <table class="fw">
+                                  <tr>
+                                    <td class="vt">
+                                      <div class="post-menu"><a href="/a/26493349/7582294" title="short permalink to this answer" class="short-link" id="link-post-26493349">share</a><span class="lsep">|</span><a href="/posts/26493349/edit" class="suggest-edit-post" title="revise and improve this post">edit</a></div>                    </td>
+                                      <td align="right" class="post-signature">
+                                        <div class="user-info user-hover">
+                                          <div class="user-action-time">
+                                            <a href="/posts/26493349/revisions" title="show all edits to this post">edited <span title="2014-10-21 18:12:58Z" class="relativetime">Oct 21 '14 at 18:12</span></a>
+                                          </div>
+                                          <div class="user-gravatar32">
+                                            <a href="/users/3885376/romania-engineer"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/XgeJ5.png?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+                                          </div>
+                                          <div class="user-details">
+                                            <a href="/users/3885376/romania-engineer">ROMANIA_engineer</a>
+                                            <div class="-flair">
+                                              <span class="reputation-score" title="reputation score 18,701" dir="ltr">18.7k</span><span title="13 gold badges"><span class="badge1"></span><span class="badgecount">13</span></span><span title="93 silver badges"><span class="badge2"></span><span class="badgecount">93</span></span><span title="99 bronze badges"><span class="badge3"></span><span class="badgecount">99</span></span>
+                                            </div>
+                                          </div>
+                                        </div>    </td>
+
+
+
+                                        <td align="right" class="post-signature">
+
+
+                                          <div class="user-info ">
+                                            <div class="user-action-time">
+                                              answered <span title="2014-10-21 18:08:56Z" class="relativetime">Oct 21 '14 at 18:08</span>
+                                            </div>
+                                            <div class="user-gravatar32">
+                                              <a href="/users/3791031/colundrum"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/Pt8t1.jpg?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+                                            </div>
+                                            <div class="user-details">
+                                              <a href="/users/3791031/colundrum">colundrum</a>
+                                              <div class="-flair">
+                                                <span class="reputation-score" title="reputation score " dir="ltr">415</span><span title="5 silver badges"><span class="badge2"></span><span class="badgecount">5</span></span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="votecell"></td>
+                                  <td>
+                                    <div id="comments-26493349" class="comments ">
+                                      <table>
+                                        <tbody data-remaining-comments-count="0"
+                                        data-canpost="false"
+                                        data-cansee="true"
+                                        data-comments-unavailable="false"
+                                        data-addlink-disabled="true">
+
+
+
+                                        <tr id="comment-49063910" class="comment ">
+                                          <td>
+                                            <table>
+                                              <tbody>
+                                                <tr>
+                                                  <td class=" comment-score">
+                                                    &nbsp;&nbsp;
+                                                  </td>
+                                                  <td>
+                                                    &nbsp;
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                          <td class="comment-text">
+                                            <div style="display: block;" class="comment-body">
+                                              <span class="comment-copy">needs an update I think - not working for me. Using deprecated calls to the API</span>
+                                              &ndash;&nbsp;<a href="/users/1318826/dean-wilson"
+                                              title="154 reputation"
+                                              class="comment-user">Dean_Wilson</a>
+                                              <span class="comment-date" dir="ltr"><span title="2015-05-27 21:04:11Z" class="relativetime-clean">May 27 '15 at 21:04</span></span>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                        <tr id="comment-49064118" class="comment ">
+                                          <td class="comment-actions">
+                                            <table>
+                                              <tbody>
+                                                <tr>
+                                                  <td class=" comment-score">
+                                                    <span title="number of &#39;useful comment&#39; votes received"
+                                                    class="cool">1</span>
+                                                  </td>
+                                                  <td>
+                                                    &nbsp;
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                          <td class="comment-text">
+                                            <div style="display: block;" class="comment-body">
+                                              <span class="comment-copy">Instead I downloaded and installed manually from <a href="https://github.com/griiin/atom-auto-indent" rel="nofollow noreferrer">github.com/griiin/atom-auto-indent</a> and now seems to work...</span>
+                                              &ndash;&nbsp;<a href="/users/1318826/dean-wilson"
+                                              title="154 reputation"
+                                              class="comment-user">Dean_Wilson</a>
+                                              <span class="comment-date" dir="ltr"><span title="2015-05-27 21:10:13Z" class="relativetime-clean">May 27 '15 at 21:10</span></span>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+
+                                  <div id="comments-link-26493349" data-rep=50 data-reg=true>
+
+                                    <a class="js-add-link comments-link disabled-link "
+                                    title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                                    >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+                                    <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+                                  </div>
+                                </td>
+                              </tr>    </table>
+                            </div>
+
+
+                            <a name="34912184"></a>
+                            <div id="answer-34912184" class="answer" data-answerid="34912184"  itemscope itemtype="http://schema.org/Answer">
+                              <table>
+                                <tr>
+                                  <td class="votecell">
+
+
+                                    <div class="vote">
+                                      <input type="hidden" name="_id_" value="34912184">
+                                      <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+                                      <span itemprop="upvoteCount" class="vote-count-post ">10</span>
+                                      <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+
+
+
+
+                                    </div>
+
+                                  </td>
+
+
+
+                                  <td class="answercell">
+                                    <div class="post-text" itemprop="text">
+                                      <p>I prefer using atom-beautify, <code>CTRL + ALT + B</code> (in linux, may be in windows also) handles better al kind of formats and it is also customizable per file format.</p>
+
+                                      <p>more details here: <a href="https://atom.io/packages/atom-beautify" rel="noreferrer">https://atom.io/packages/atom-beautify</a></p>
+                                    </div>
+                                    <table class="fw">
+                                      <tr>
+                                        <td class="vt">
+                                          <div class="post-menu"><a href="/a/34912184/7582294" title="short permalink to this answer" class="short-link" id="link-post-34912184">share</a><span class="lsep">|</span><a href="/posts/34912184/edit" class="suggest-edit-post" title="revise and improve this post">edit</a></div>                    </td>
+
+
+
+                                          <td align="right" class="post-signature">
+
+
+                                            <div class="user-info ">
+                                              <div class="user-action-time">
+                                                answered <span title="2016-01-20 22:51:56Z" class="relativetime">Jan 20 '16 at 22:51</span>
+                                              </div>
+                                              <div class="user-gravatar32">
+                                                <a href="/users/443427/ungalcrys"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/fa0eb06f9ab072dc55b70e37d3c560f3?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+                                              </div>
+                                              <div class="user-details">
+                                                <a href="/users/443427/ungalcrys">ungalcrys</a>
+                                                <div class="-flair">
+                                                  <span class="reputation-score" title="reputation score " dir="ltr">2,229</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="18 silver badges"><span class="badge2"></span><span class="badgecount">18</span></span><span title="18 bronze badges"><span class="badge3"></span><span class="badgecount">18</span></span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td class="votecell"></td>
+                                    <td>
+                                      <div id="comments-34912184" class="comments ">
+                                        <table>
+                                          <tbody data-remaining-comments-count="0"
+                                          data-canpost="false"
+                                          data-cansee="true"
+                                          data-comments-unavailable="false"
+                                          data-addlink-disabled="true">
+
+
+
+                                          <tr id="comment-60944599" class="comment ">
+                                            <td class="comment-actions">
+                                              <table>
+                                                <tbody>
+                                                  <tr>
+                                                    <td class=" comment-score">
+                                                      <span title="number of &#39;useful comment&#39; votes received"
+                                                      class="cool">2</span>
+                                                    </td>
+                                                    <td>
+                                                      &nbsp;
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </td>
+                                            <td class="comment-text">
+                                              <div style="display: block;" class="comment-body">
+                                                <span class="comment-copy">It removes the format in Angular directives... the view wont load..</span>
+                                                &ndash;&nbsp;<a href="/users/4374291/t04435"
+                                                title="661 reputation"
+                                                class="comment-user">T04435</a>
+                                                <span class="comment-date" dir="ltr"><span title="2016-04-17 13:47:23Z" class="relativetime-clean">Apr 17 '16 at 13:47</span></span>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                          <tr id="comment-74077221" class="comment ">
+                                            <td>
+                                              <table>
+                                                <tbody>
+                                                  <tr>
+                                                    <td class=" comment-score">
+                                                      &nbsp;&nbsp;
+                                                    </td>
+                                                    <td>
+                                                      &nbsp;
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </td>
+                                            <td class="comment-text">
+                                              <div style="display: block;" class="comment-body">
+                                                <span class="comment-copy">With <b>twig</b> it adds an space for <code>path</code> function so the route couldn&#39;t be found</span>
+                                                &ndash;&nbsp;<a href="/users/1830720/rodol-velasco"
+                                                title="391 reputation"
+                                                class="comment-user">Rodol Velasco</a>
+                                                <span class="comment-date" dir="ltr"><span title="2017-04-20 06:22:50Z" class="relativetime-clean">Apr 20 at 6:22</span></span>
+                                                <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+
+                                    <div id="comments-link-34912184" data-rep=50 data-reg=true>
+
+                                      <a class="js-add-link comments-link disabled-link "
+                                      title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                                      >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+                                      <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+                                    </div>
+                                  </td>
+                                </tr>    </table>
+                              </div>
+
+
+                              <a name="32896234"></a>
+                              <div id="answer-32896234" class="answer" data-answerid="32896234"  itemscope itemtype="http://schema.org/Answer">
+                                <table>
+                                  <tr>
+                                    <td class="votecell">
+
+
+                                      <div class="vote">
+                                        <input type="hidden" name="_id_" value="32896234">
+                                        <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+                                        <span itemprop="upvoteCount" class="vote-count-post ">7</span>
+                                        <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+
+
+
+
+                                      </div>
+
+                                    </td>
+
+
+
+                                    <td class="answercell">
+                                      <div class="post-text" itemprop="text">
+                                        <p>You can just quickly open up the command palette and do it there<br>
+                                          <code>cmd + shift + p</code> and search for <code>Editor: Auto Indent</code></p>
+                                        </div>
+                                        <table class="fw">
+                                          <tr>
+                                            <td class="vt">
+                                              <div class="post-menu"><a href="/a/32896234/7582294" title="short permalink to this answer" class="short-link" id="link-post-32896234">share</a><span class="lsep">|</span><a href="/posts/32896234/edit" class="suggest-edit-post" title="revise and improve this post">edit</a></div>                    </td>
+
+
+
+                                              <td align="right" class="post-signature">
+
+
+                                                <div class="user-info ">
+                                                  <div class="user-action-time">
+                                                    answered <span title="2015-10-01 20:22:50Z" class="relativetime">Oct 1 '15 at 20:22</span>
+                                                  </div>
+                                                  <div class="user-gravatar32">
+                                                    <a href="/users/1988272/codingninja"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/MKKR5.jpg?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+                                                  </div>
+                                                  <div class="user-details">
+                                                    <a href="/users/1988272/codingninja">codingninja</a>
+                                                    <div class="-flair">
+                                                      <span class="reputation-score" title="reputation score " dir="ltr">300</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="5 silver badges"><span class="badge2"></span><span class="badgecount">5</span></span><span title="15 bronze badges"><span class="badge3"></span><span class="badgecount">15</span></span>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+
+                                      <tr>
+                                        <td class="votecell"></td>
+                                        <td>
+                                          <div id="comments-32896234" class="comments ">
+                                            <table>
+                                              <tbody data-remaining-comments-count="0"
+                                              data-canpost="false"
+                                              data-cansee="true"
+                                              data-comments-unavailable="false"
+                                              data-addlink-disabled="true">
+
+
+
+                                              <tr id="comment-58909368" class="comment ">
+                                                <td class="comment-actions">
+                                                  <table>
+                                                    <tbody>
+                                                      <tr>
+                                                        <td class=" comment-score">
+                                                          <span title="number of &#39;useful comment&#39; votes received"
+                                                          class="cool">4</span>
+                                                        </td>
+                                                        <td>
+                                                          &nbsp;
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                                <td class="comment-text">
+                                                  <div style="display: block;" class="comment-body">
+                                                    <span class="comment-copy">That&#39;s not quick if you&#39;re a power user :)</span>
+                                                    &ndash;&nbsp;<a href="/users/1599122/jad-joubran"
+                                                    title="1,221 reputation"
+                                                    class="comment-user">Jad Joubran</a>
+                                                    <span class="comment-date" dir="ltr"><span title="2016-02-24 20:47:40Z" class="relativetime-clean">Feb 24 '16 at 20:47</span></span>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+
+                                        <div id="comments-link-32896234" data-rep=50 data-reg=true>
+
+                                          <a class="js-add-link comments-link disabled-link "
+                                          title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                                          >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+                                          <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+                                        </div>
+                                      </td>
+                                    </tr>    </table>
+                                  </div>
+
+
+                                  <a name="30556972"></a>
+                                  <div id="answer-30556972" class="answer" data-answerid="30556972"  itemscope itemtype="http://schema.org/Answer">
+                                    <table>
+                                      <tr>
+                                        <td class="votecell">
+
+
+                                          <div class="vote">
+                                            <input type="hidden" name="_id_" value="30556972">
+                                            <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+                                            <span itemprop="upvoteCount" class="vote-count-post ">2</span>
+                                            <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+
+
+
+
+                                          </div>
+
+                                        </td>
+
+
+
+                                        <td class="answercell">
+                                          <div class="post-text" itemprop="text">
+                                            <p>If you have troubles with hotkeys, try to open <code>Key Binding Resolver Window</code> with <kbd>Cmd + .</kbd>. It will show you keys you're pressing in the realtime.</p>
+
+                                            <p>For example, <kbd>Cmd + Shift + '</kbd> is actually <kbd>Cmd + "</kbd></p>
+                                          </div>
+                                          <table class="fw">
+                                            <tr>
+                                              <td class="vt">
+                                                <div class="post-menu"><a href="/a/30556972/7582294" title="short permalink to this answer" class="short-link" id="link-post-30556972">share</a><span class="lsep">|</span><a href="/posts/30556972/edit" class="suggest-edit-post" title="revise and improve this post">edit</a></div>                    </td>
+
+
+
+                                                <td align="right" class="post-signature">
+
+
+                                                  <div class="user-info ">
+                                                    <div class="user-action-time">
+                                                      answered <span title="2015-05-31 11:40:25Z" class="relativetime">May 31 '15 at 11:40</span>
+                                                    </div>
+                                                    <div class="user-gravatar32">
+                                                      <a href="/users/541961/dmitriy"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/w1TWA.png?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+                                                    </div>
+                                                    <div class="user-details">
+                                                      <a href="/users/541961/dmitriy">Dmitriy</a>
+                                                      <div class="-flair">
+                                                        <span class="reputation-score" title="reputation score " dir="ltr">3,611</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="32 silver badges"><span class="badge2"></span><span class="badgecount">32</span></span><span title="38 bronze badges"><span class="badge3"></span><span class="badgecount">38</span></span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          </td>
+                                        </tr>
+
+                                        <tr>
+                                          <td class="votecell"></td>
+                                          <td>
+                                            <div id="comments-30556972" class="comments  dno">
+                                              <table>
+                                                <tbody data-remaining-comments-count="0"
+                                                data-canpost="false"
+                                                data-cansee="true"
+                                                data-comments-unavailable="false"
+                                                data-addlink-disabled="true">
+
+                                                <tr><td></td><td></td></tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+
+                                          <div id="comments-link-30556972" data-rep=50 data-reg=true>
+
+                                            <a class="js-add-link comments-link disabled-link "
+                                            title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                                            >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+                                            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+                                          </div>
+                                        </td>
+                                      </tr>    </table>
+                                    </div>
+
+
+                                    <a name="37419906"></a>
+                                    <div id="answer-37419906" class="answer" data-answerid="37419906"  itemscope itemtype="http://schema.org/Answer">
+                                      <table>
+                                        <tr>
+                                          <td class="votecell">
+
+
+                                            <div class="vote">
+                                              <input type="hidden" name="_id_" value="37419906">
+                                              <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+                                              <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+                                              <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+
+
+
+
+                                            </div>
+
+                                          </td>
+
+
+
+                                          <td class="answercell">
+                                            <div class="post-text" itemprop="text">
+                                              <p>This works for me:</p>
+
+                                              <pre><code>'atom-workspace atom-text-editor':
+                                                'ctrl-alt-a': 'editor:auto-indent'
+                                              </code></pre>
+
+                                              <p>You have to select all with <strong>ctrl-a</strong> first.</p>
+                                            </div>
+                                            <table class="fw">
+                                              <tr>
+                                                <td class="vt">
+                                                  <div class="post-menu"><a href="/a/37419906/7582294" title="short permalink to this answer" class="short-link" id="link-post-37419906">share</a><span class="lsep">|</span><a href="/posts/37419906/edit" class="suggest-edit-post" title="revise and improve this post">edit</a></div>                    </td>
+
+
+
+                                                  <td align="right" class="post-signature">
+
+
+                                                    <div class="user-info ">
+                                                      <div class="user-action-time">
+                                                        answered <span title="2016-05-24 17:10:41Z" class="relativetime">May 24 '16 at 17:10</span>
+                                                      </div>
+                                                      <div class="user-gravatar32">
+                                                        <a href="/users/4200188/dave-doe"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/H4zLQ.png?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+                                                      </div>
+                                                      <div class="user-details">
+                                                        <a href="/users/4200188/dave-doe">dave doe</a>
+                                                        <div class="-flair">
+                                                          <span class="reputation-score" title="reputation score " dir="ltr">11</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </td>
+                                                </tr>
+                                              </table>
+                                            </td>
+                                          </tr>
+
+                                          <tr>
+                                            <td class="votecell"></td>
+                                            <td>
+                                              <div id="comments-37419906" class="comments  dno">
+                                                <table>
+                                                  <tbody data-remaining-comments-count="0"
+                                                  data-canpost="false"
+                                                  data-cansee="true"
+                                                  data-comments-unavailable="false"
+                                                  data-addlink-disabled="true">
+
+                                                  <tr><td></td><td></td></tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+
+                                            <div id="comments-link-37419906" data-rep=50 data-reg=true>
+
+                                              <a class="js-add-link comments-link disabled-link "
+                                              title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                                              >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+                                              <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+                                            </div>
+                                          </td>
+                                        </tr>    </table>
+                                      </div>
+                                      <a name='new-answer'></a>
+                                      <form id="post-form" action="/questions/22611377/answer/submit" method="post"  class="post-form">
+                                        <input type="hidden" id="post-id" value="22611377" />
+                                        <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false" />
+                                        <input type="hidden" name="referrer" value="https://www.google.co.uk/"/>
+                                        <h2 class="space">Your Answer</h2>
+
+
+                                        <script>
+                                        StackExchange.ifUsing("editor", function () {
+                                          StackExchange.using("externalEditor", function () {
+                                            StackExchange.using("snippets", function () {
+                                              StackExchange.snippets.init();
+                                            });
+                                          });
+                                        }, "code-snippets");
+                                        </script>
+
+
+                                        <script>
+                                        StackExchange.ready(function() {
+                                          initTagRenderer("".split(" "), "".split(" "));
+
+                                          StackExchange.using("externalEditor", function() {
+                                            // Have to fire editor after snippets, if snippets enabled
+                                            if (StackExchange.settings.snippets.snippetsEnabled) {
+                                              StackExchange.using("snippets", function() {
+                                                createEditor();
+                                              });
+                                            }
+                                            else {
+                                              createEditor();
+                                            }
+                                          });
+
+                                          function createEditor() {
+                                            StackExchange.prepareEditor({
+                                              heartbeatType: 'answer',
+                                              convertImagesToLinks: true,
+                                              reputationToPostImages: 10,
+                                              bindNavPrevention: true,
+                                              postfix: "",
+                                              onDemand: false,
+                                              discardSelector: ".discard-answer"
+                                              ,immediatelyShowMarkdownHelp:true
+                                            });
+
+
+                                          }
+                                        });
+                                        </script>
+
+
+                                        <div id="post-editor" class="post-editor js-post-editor">
+
+                                          <div style="position: relative;">
+                                            <div class="wmd-container">
+                                              <div id="wmd-button-bar" class="wmd-button-bar"></div>
+                                              <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+                                            </div>
+                                          </div>
+
+                                          <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+                                          <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+                                          <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+                                          <div id="wmd-preview" class="wmd-preview"></div>
+                                          <div></div>
+                                          <div class="edit-block">
+                                            <input id="fkey" name="fkey" type="hidden" value="650e019ad3f60b04d4790bb714aa760a">
+                                            <input id="author" name="author" type="text">
+                                          </div>
+
+
+
+                                        </div>
+                                        <div style="position: relative;">
+
+
+                                        </div>
+
+                                        <div class="form-submit cbt">
+                                          <input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+                                          <a href="#" class="btn-clear discard-answer dno">discard</a>
+                                        </div>
+                                      </form>
+
+
+
+                                      <h2 class="bottom-notice" data-loc="1">
+                                        Not the answer you&#39;re looking for?							Browse other questions tagged <a href="/questions/tagged/code-formatting" class="post-tag" title="show questions tagged &#39;code-formatting&#39;" rel="tag">code-formatting</a> <a href="/questions/tagged/atom-editor" class="post-tag" title="show questions tagged &#39;atom-editor&#39;" rel="tag">atom-editor</a> <a href="/questions/tagged/auto-indent" class="post-tag" title="show questions tagged &#39;auto-indent&#39;" rel="tag">auto-indent</a>  or <a href="/questions/ask">ask your own question</a>.						</h2>
+                                      </div>
+                                    </div>
+                                    <div id="sidebar" class="show-votes" role="complementary" aria-label="sidebar">
+
+
+
+                                      <script>
+                                      window.showNewUser = false;
+
+                                      </script>
+
+                                      <div class="module newuser newuser-greeting" id="newuser-box" style="display:none;">
+                                        <h4>Hello World!</h4>
+                                        <div>
+                                          <p>This is a collaboratively edited question and answer site for <b>professional and enthusiast programmers</b>. It's 100% free.</p><p>Got a question about the site itself? <a href="https://meta.stackoverflow.com">meta</a> is the place to talk about things like what questions are appropriate, what tags we should use, etc.</p>
+                                          <p class="ar">
+                                            <a href="/tour?mnu=1">about &raquo;</a>&nbsp;&nbsp;&nbsp;
+                                            <a href="/help?mnu=1">help &raquo;</a>
+                                            &nbsp; <a href="https://meta.stackoverflow.com">meta &raquo;</a>
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <script>
+                                      if (showNewUser) {
+                                        document.getElementById('newuser-box').style.display = '';
+                                      }
+                                      </script>						    <div class="module question-stats">
+                                        <table id="qinfo">
+                                          <tr>
+                                            <td>
+                                              <p class="label-key">asked</p>
+                                            </td>
+                                            <td style="padding-left: 10px">
+                                              <p class="label-key" title="2014-03-24 13:52:32Z"><b>3 years, 2 months ago</b></p>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <p class="label-key">viewed</p>
+                                            </td>
+
+                                            <td style="padding-left: 10px">
+                                              <p class="label-key">
+                                                <b>176616 times</b>
+                                              </p>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <p class="label-key">active</p>
+                                            </td>
+                                            <td style="padding-left: 10px">
+                                              <p class="label-key"><b><a href="?lastactivity" class="lastactivity-link" title="2016-05-24 17:10:41Z">12 months ago</a></b></p>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </div>
+                                      <div class="module community-bulletin" data-tracker="cb=1">
+                                        <div class="related">
+                                          <div class="bulletin-title">
+                                            Blog
+                                          </div>
+                                          <hr />
+                                          <div class="spacer">
+                                            <div class="bulletin-item-type">
+                                              <a href="https://stackoverflow.blog/2017/05/24/dive-stack-overflow-jobs-search/" class="question-hyperlink">
+                                                <div class="favicon favicon-stackexchangemeta" title="Meta Stack Exchange"></div>                </a>
+                                              </div>
+                                              <div class="bulletin-item-content">
+                                                <a href="https://stackoverflow.blog/2017/05/24/dive-stack-overflow-jobs-search/" class="question-hyperlink">A Dive Into Stack Overflow Jobs Search</a>
+                                              </div>
+                                              <br class="cbt" />
+                                            </div>
+                                            <div class="spacer">
+                                              <div class="bulletin-item-type">
+                                                <a href="https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/" class="question-hyperlink">
+                                                  <div class="favicon favicon-stackexchangemeta" title="Meta Stack Exchange"></div>                </a>
+                                                </div>
+                                                <div class="bulletin-item-content">
+                                                  <a href="https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/" class="question-hyperlink">Stack Overflow: Helping One Million Developers Exit Vim</a>
+                                                </div>
+                                                <br class="cbt" />
+                                              </div>
+                                              <div class="bulletin-title">
+                                                Featured on Meta
+                                              </div>
+                                              <hr />
+                                              <div class="spacer">
+                                                <div class="bulletin-item-type">
+                                                  <a href="https://meta.stackoverflow.com/questions/349410/tearing-down-the-structure-of-documentation" class="question-hyperlink">
+                                                    <div class="favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>                </a>
+                                                  </div>
+                                                  <div class="bulletin-item-content">
+                                                    <a href="https://meta.stackoverflow.com/questions/349410/tearing-down-the-structure-of-documentation" class="question-hyperlink">Tearing Down the Structure of Documentation</a>
+                                                  </div>
+                                                  <br class="cbt" />
+                                                </div>
+                                                <div class="bulletin-title">
+                                                  Hot Meta Posts
+                                                </div>
+                                                <hr />
+                                                <div class="spacer">
+                                                  <div class="bulletin-item-type">
+                                                    <span title="Vote score (upvotes - downvotes)">4</span>
+                                                  </div>
+                                                  <div class="bulletin-item-content">
+                                                    <a href="https://meta.stackoverflow.com/questions/349676/disappearing-question-that-resurfaces" class="question-hyperlink">Disappearing question that resurfaces</a>
+                                                  </div>
+                                                  <br class="cbt" />
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="everyonelovesstackoverflow" id="hireme"></div>
+                                            <script>
+                                            window.clc_request = 'ArOHTz5po9QIJ8mcALEFWQECAAAAAgAAAAM7AAAAfGNvZGUtZm9ybWF0dGluZ3xhdG9tLWVkaXRvcnxhdXRvLWluZGVudHx4LXVzZXItcmVnaXN0ZXJlZHwAhgx3Xq1uo7eGUw';;(function(n){var u={log:window.console.log.bind(window.console,"[clc]"),error:window.console.error.bind(window.console,"[clc]")},f,e,t,r,i;try{if(typeof[].indexOf!="function")return;if(window.attachEvent&&!window.addEventListener)return;if(f=n.allowed,!f)return;if(e=new RegExp(n.allowed),!e.test(location.hostname)){u.error("Invalid host: "+location.hostname);return}if(t=window,t.clc=t.clc||{},t.clc.init=t.clc.init||[],t.clc.init.push(function(n){return n.load()}),t.clc.options){for(r in t.clc.options)n[r]=t.clc.options[r];t.clc.options=n}else t.clc.options=n;i=document.createElement("script");i.async=!0;i.src=n.lib;document.body.appendChild(i)}catch(o){u.error("[clc] Error in loader:",o)}}).call(null, {"lib":"https://cdn.sstatic.net/clc/clc.min.js?v=436861d2e2c5","u":"https://clc.stackoverflow.com/markup.js","azw":true,"kt":2000,"tto":true,"d":{"sb":["hireme","clc-sb"],"tlb":["careers1","clc-tlb"],"mlb":["careers3","clc-mlb"]},"h":"clc.stackoverflow.com","autoload":true,"allowed":"^(((talent\\.)?stackoverflow)|(blog\\.codinghorror)|(serverfault|askubuntu)|([^\\.]+\\.stackexchange))\\.com$"});        </script>
+                                            <div class="module" id="chat-feature">
+
+                                            <h4><a href="http://chat.stackoverflow.com" id="h-chat-link">Visit Chat</a></h4>
+                                            <div class="related" id="ad502-rooms"></div>
+                                            <script>
+                                            // <!--
+                                            StackExchange.ready(
+                                              function () {
+                                                var options = {
+                                                  chatUrl: 'http://chat.stackoverflow.com',
+                                                  reloadUrl: '/api/recent-chat',
+                                                  preloadData: {"activeUsers":135,"activeRooms":60,"rooms":[{"name":"Lounge\u003cC++\u003e","id":10,"lastPost":1495707711,"posts":4904706,"users":[{"name":"Luc Danton","id":726300,"emailhash":"!https://i.stack.imgur.com/ZWH6H.png?s=128\u0026g=1","lastPost":1495707711},{"name":"Mikhail","id":314290,"emailhash":"5ffde821f0f9670e601b19f1731a6849","lastPost":1495707538},{"name":"spakai","id":4232475,"emailhash":"!https://i.stack.imgur.com/I9pom.png?s=128\u0026g=1","lastPost":1495707274},{"name":"login_not_failed","id":7561577,"emailhash":"5d4a245cd8b14a5fba97b5c1336a7161","lastPost":1495707042},{"name":"Telkitty","id":2369847,"emailhash":"!https://i.stack.imgur.com/P2Yey.jpg?s=128\u0026g=1","lastPost":1495705124},{"name":"Rudianto Prasetya","id":703016,"emailhash":"!https://i.stack.imgur.com/N3391.jpg?s=128\u0026g=1","lastPost":1495704943},{"name":"Andy Prowl","id":1932150,"emailhash":"!https://i.stack.imgur.com/bgNyH.jpg?s=128\u0026g=1","lastPost":1495704681}],"messages":[{"date":1495707711,"user":"Luc Danton","userid":726300}],"singleImage":false,"tags":["c++","c++11","c++14","c++17","c++-faq"]},{"name":"C#","id":7,"lastPost":1495707929,"posts":2108085,"users":[{"name":"Learning","id":4927379,"emailhash":"!https://i.stack.imgur.com/58go5.gif?s=128\u0026g=1","lastPost":1495707929},{"name":"milleniumbug","id":1012936,"emailhash":"!https://i.stack.imgur.com/lVX7j.jpg?s=128\u0026g=1","lastPost":1495707820},{"name":"Icche Guri","id":6379197,"emailhash":"!https://i.stack.imgur.com/ls3yu.png?s=128\u0026g=1","lastPost":1495707715},{"name":"Avner Shahar-Kashtan","id":701054,"emailhash":"494c00da8ba5640f1f6a1eb1a62aaa46","lastPost":1495707510},{"name":"mr5","id":2304737,"emailhash":"!https://i.stack.imgur.com/YWbV0.png?s=128\u0026g=1","lastPost":1495707457},{"name":"Kamil Solecki","id":2534346,"emailhash":"!https://i.stack.imgur.com/Dfvkv.jpg?s=128\u0026g=1","lastPost":1495707361},{"name":"G K","id":1966993,"emailhash":"74d68b1688658ba9c2272778bbe13660","lastPost":1495707255}],"messages":[{"date":1495707929,"user":"Learning","userid":4927379}],"singleImage":false,"tags":[".net","asp.net","asp.net-mvc","c#","coreclr","entity-framework","linq","visual-studio","wcf","wpf"]}]}
+                                                };
+
+                                                StackExchange.chatAd.init(options);
+                                              });
+                                              // -->
+                                              </script>
+
+                                            </div>
+
+                                            <div class="module sidebar-linked">
+                                              <h4 id="h-linked">Linked</h4>
+                                              <div class="linked" data-tracker="lq=1">
+
+                                                <div class="spacer">
+                                                  <a href="/q/24456995" title="Vote score (upvotes - downvotes)">
+                                                    <div class="answer-votes answered-accepted default">28</div>
+                                                  </a>
+                                                  <a href="/questions/24456995/how-do-i-write-a-custom-command-in-atom?noredirect=1" class="question-hyperlink">How do I write a custom command in Atom?</a>
+                                                </div>
+                                                <div class="spacer">
+                                                  <a href="/q/27093408" title="Vote score (upvotes - downvotes)">
+                                                    <div class="answer-votes  default">1</div>
+                                                  </a>
+                                                  <a href="/questions/27093408/atom-editor-auto-indent-keyboard-shortcut?noredirect=1" class="question-hyperlink">Atom Editor Auto Indent Keyboard Shortcut</a>
+                                                </div>
+                                                <div class="spacer">
+                                                  <a href="/q/28458370" title="Vote score (upvotes - downvotes)">
+                                                    <div class="answer-votes answered-accepted default">-3</div>
+                                                  </a>
+                                                  <a href="/questions/28458370/how-can-i-align-all-source-code-to-the-left?noredirect=1" class="question-hyperlink">How can I align all source code to the left?</a>
+                                                </div>			</div>
+                                              </div>
+
+                                              <div class="module sidebar-related">
+                                                <h4 id="h-related">Related</h4>
+                                                <div class="related js-gps-related-questions" data-tracker="rq=1">
+                                                  <div class="spacer"><a href="/q/234564" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">865</div></a><a href="/questions/234564/tab-key-4-spaces-and-auto-indent-after-curly-braces-in-vim" class="question-hyperlink">Tab key == 4 spaces and auto-indent after curly braces in Vim</a></div><div class="spacer"><a href="/q/2514445" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">750</div></a><a href="/questions/2514445/turning-off-auto-indent-when-pasting-text-into-vim" class="question-hyperlink">Turning off auto indent when pasting text into vim</a></div><div class="spacer"><a href="/q/3961217" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1256</div></a><a href="/questions/3961217/how-to-format-xml-in-notepad" class="question-hyperlink">How to format XML in Notepad++?</a></div><div class="spacer"><a href="/q/7117949" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">391</div></a><a href="/questions/7117949/how-to-auto-format-indent-xml-html-in-notepad" class="question-hyperlink">How To Auto-Format / Indent XML/HTML in Notepad++</a></div><div class="spacer"><a href="/q/27093408" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">1</div></a><a href="/questions/27093408/atom-editor-auto-indent-keyboard-shortcut" class="question-hyperlink">Atom Editor Auto Indent Keyboard Shortcut</a></div><div class="spacer"><a href="/q/29029167" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">3</div></a><a href="/questions/29029167/how-to-set-auto-indent-and-formatting-style-in-atom-io-editor" class="question-hyperlink">How to set auto-indent and formatting style in Atom.io editor</a></div><div class="spacer"><a href="/q/29902834" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">21</div></a><a href="/questions/29902834/auto-save-in-atom-editor" class="question-hyperlink">Auto-save in Atom Editor</a></div><div class="spacer"><a href="/q/40548995" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">-1</div></a><a href="/questions/40548995/auto-indent-in-emacs-atom-and-sublime" class="question-hyperlink">Auto Indent in Emacs, Atom, and Sublime</a></div><div class="spacer"><a href="/q/40766979" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">2</div></a><a href="/questions/40766979/make-atom-behave-like-webstorm-on-auto-indentation" class="question-hyperlink">Make Atom behave like WebStorm on auto-indentation</a></div><div class="spacer"><a href="/q/41105132" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">1</div></a><a href="/questions/41105132/atom-editor-indentation-adding-extra-unwanted-spaces" class="question-hyperlink">Atom editor: indentation adding extra unwanted spaces</a></div>
+                                                </div>
+                                              </div>
+
+
+                                              <div id="hot-network-questions" class="module tex2jax_ignore">
+                                                <h4>
+                                                  <a href="https://stackexchange.com/questions?tab=hot"
+                                                  class="js-gps-track"
+                                                  data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+                                                  Hot Network Questions
+                                                </a>
+                                              </h4>
+                                              <ul>
+                                                <li >
+                                                  <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="https://rpg.stackexchange.com/questions/100348/does-using-the-paladin-protection-fighting-style-move-the-characters-involved" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    Does using the Paladin Protection Fighting Style move the characters involved?
+                                                  </a>
+
+                                                </li>
+                                                <li >
+                                                  <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="https://scifi.stackexchange.com/questions/160202/who-invented-the-talking-patronus-spell-used-by-the-order-in-the-second-wizard" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    Who invented the &quot;talking Patronus&quot; spell used by the Order in the second Wizarding War?
+                                                  </a>
+
+                                                </li>
+                                                <li >
+                                                  <div class="favicon favicon-parenting" title="Parenting Stack Exchange"></div><a href="https://parenting.stackexchange.com/questions/30198/what-would-you-do-if-you-are-pretty-sure-your-son-is-heading-towards-a-disastrou" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:228 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    What would you do if you are pretty sure your son is heading towards a disastrous marriage?
+                                                  </a>
+
+                                                </li>
+                                                <li >
+                                                  <div class="favicon favicon-history" title="History Stack Exchange"></div><a href="https://history.stackexchange.com/questions/38221/was-england-called-england-in-the-days-of-king-arthur" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:324 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    Was England called England in the days of King Arthur?
+                                                  </a>
+
+                                                </li>
+                                                <li >
+                                                  <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="https://worldbuilding.stackexchange.com/questions/81754/living-in-a-giant-swamp-construction" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    Living in a Giant Swamp - Construction
+                                                  </a>
+
+                                                </li>
+                                                <li class="dno js-hidden">
+                                                  <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="https://worldbuilding.stackexchange.com/questions/81694/what-could-be-the-cause-of-a-disease-that-makes-someone-or-something-fall-toward" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    What could be the cause of a disease that makes someone or something fall towards the sky?
+                                                  </a>
+
+                                                </li>
+                                                <li class="dno js-hidden">
+                                                  <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="https://movies.stackexchange.com/questions/73621/whats-the-point-of-actors-occasionally-directing-a-tv-show-episode" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:367 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    What&#39;s the point of actors occasionally directing a TV show episode?
+                                                  </a>
+
+                                                </li>
+                                                <li class="dno js-hidden">
+                                                  <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="https://english.stackexchange.com/questions/390545/is-i-ve-boughten-many-vinyls-correct-in-its-use-of-boughten" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    Is “I’ve boughten many vinyls” correct in its use of “boughten”?
+                                                  </a>
+
+                                                </li>
+                                                <li class="dno js-hidden">
+                                                  <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="https://worldbuilding.stackexchange.com/questions/81634/does-a-hexagon-based-bread-loaf-make-any-sense" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    Does a hexagon-based bread loaf make any sense?
+                                                  </a>
+
+                                                </li>
+                                                <li class="dno js-hidden">
+                                                  <div class="favicon favicon-superuser" title="Super User"></div><a href="https://superuser.com/questions/1212574/which-kind-of-hard-disk-is-this-picture-attached" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:3 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    Which kind of hard disk is this? (picture attached)
+                                                  </a>
+
+                                                </li>
+                                                <li class="dno js-hidden">
+                                                  <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="https://scifi.stackexchange.com/questions/160232/why-was-marty-fired-in-2015" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    Why was Marty fired in 2015?
+                                                  </a>
+
+                                                </li>
+                                                <li class="dno js-hidden">
+                                                  <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="https://stackoverflow.com/questions/44174712/operator-cannot-be-applied-to-operand-of-type-t-2" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    Operator &#39;?&#39; cannot be applied to operand of type &#39;T&#39; (2)
+                                                  </a>
+
+                                                </li>
+                                                <li class="dno js-hidden">
+                                                  <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="https://worldbuilding.stackexchange.com/questions/81560/for-how-long-after-an-apocalypse-would-modern-cars-remain-usable" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    For how long after an apocalypse would modern cars remain usable?
+                                                  </a>
+
+                                                </li>
+                                                <li class="dno js-hidden">
+                                                  <div class="favicon favicon-space" title="Space Exploration Stack Exchange"></div><a href="https://space.stackexchange.com/questions/21614/if-the-astronauts-on-apollo-11-had-landed-on-safely-on-the-moon-but-could-not-ta" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:508 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    If the astronauts on Apollo 11 had landed on safely on the moon but could not take off, would there have been a rescue mission?
+                                                  </a>
+
+                                                </li>
+                                                <li class="dno js-hidden">
+                                                  <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="https://puzzling.stackexchange.com/questions/52121/heres-a-clean-and-easy-visual-riddle" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    Here&#39;s a clean and easy visual riddle
+                                                  </a>
+
+                                                </li>
+                                                <li class="dno js-hidden">
+                                                  <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="https://puzzling.stackexchange.com/questions/52079/no-more-kings-puzzle" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    No More Kings puzzle
+                                                  </a>
+
+                                                </li>
+                                                <li class="dno js-hidden">
+                                                  <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="https://math.stackexchange.com/questions/2296020/what-does-mean-to-multiply-differentials" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    What does mean to multiply differentials?
+                                                  </a>
+
+                                                </li>
+                                                <li class="dno js-hidden">
+                                                  <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="https://ell.stackexchange.com/questions/130495/can-i-say-constitute-contribute-the-largest-group" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:481 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    Can I say &quot;constitute/contribute the largest group&quot;?
+                                                  </a>
+
+                                                </li>
+                                                <li class="dno js-hidden">
+                                                  <div class="favicon favicon-apple" title="Ask Different"></div><a href="https://apple.stackexchange.com/questions/284672/how-do-i-create-a-windows-like-start-menu-for-the-macos-dock-without-3rd-party-s" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:118 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    How do I create a Windows-like Start Menu for the macOS Dock without 3rd party software?
+                                                  </a>
+
+                                                </li>
+                                                <li class="dno js-hidden">
+                                                  <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="https://money.stackexchange.com/questions/80039/tax-benefits-of-recycling" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:93 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    Tax benefits of recycling
+                                                  </a>
+
+                                                </li>
+                                                <li class="dno js-hidden">
+                                                  <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="https://math.stackexchange.com/questions/2294431/probability-of-going-broke" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    Probability of going broke?
+                                                  </a>
+
+                                                </li>
+                                                <li class="dno js-hidden">
+                                                  <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="https://unix.stackexchange.com/questions/367108/what-does-while-mean" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:106 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    What does &quot;while :;&quot; mean?
+                                                  </a>
+
+                                                </li>
+                                                <li class="dno js-hidden">
+                                                  <div class="favicon favicon-softwareengineering" title="Software Engineering Stack Exchange"></div><a href="https://softwareengineering.stackexchange.com/questions/349451/in-code-reviews-should-the-reviewer-always-present-a-solution-for-issues" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:131 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    In code reviews, should the reviewer always present a solution for issues?
+                                                  </a>
+
+                                                </li>
+                                                <li class="dno js-hidden">
+                                                  <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="https://serverfault.com/questions/851652/why-do-iops-matter" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:2 }); posts_hot_network.click({ item_type:2, location:11 })">
+                                                    Why do IOPS matter?
+                                                  </a>
+
+                                                </li>
+                                              </ul>
+
+                                              <a href="#"
+                                              class="show-more js-show-more js-gps-track"
+                                              data-gps-track="posts_hot_network.click({ item_type:3, location:11 })">
+                                              more hot questions
+                                            </a>
+                                          </div>
+                                        </div>
+
+                                        <div id="feed-link">
+                                          <div id="feed-link-text">
+                                            <a href="/feeds/question/22611377" title="feed of this question and its answers">
+                                              <span class="feed-icon"></span>question feed
+                                            </a>
+                                          </div>
+                                        </div>	<script>
+                                        StackExchange.ready(function(){$.get('/posts/22611377/ivc/11e2');});
+                                        </script>
+                                        <noscript>
+                                          <div><img src="/posts/22611377/ivc/11e2" class="dno" alt="" width="0" height="0"></div>
+                                        </noscript><div style="display:none" id="prettify-lang"></div></div>
+
+                                        <script>
+                                        $('#wmd-input').one("keypress", function() {
+                                          $.ajax({
+                                            url: '/accounts/email-settings-form',
+                                            cache: false,
+                                            success: function(data) {
+                                              $('#submit-button').parent().prepend(data);
+                                            }
+                                          });
+                                        });
+
+                                        </script>
+
+                                      </div>
+                                    </div>
+
+                                  </body>
+                                  </html>
