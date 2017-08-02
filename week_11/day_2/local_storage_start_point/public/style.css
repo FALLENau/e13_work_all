@@ -1,0 +1,17 @@
+body {
+  background: #333;
+  color: orange;
+  /*text-align: center;*/
+}
+
+dt, dd {
+  display: inline-block;
+}
+
+dt::after {
+  content: ":";
+}
+
+input {
+  display: block;
+}

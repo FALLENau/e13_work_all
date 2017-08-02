@@ -1,0 +1,9 @@
+body {
+  background: #333;
+  color: orange;
+}
+
+.center-me{
+  margin: 0 auto;
+  width: 200px;
+}
