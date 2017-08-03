@@ -1,0 +1,10 @@
+body {
+  background-color: #333;
+  color: orange;
+}
+
+canvas {
+  border-width: 1px;
+  border-style: solid;
+  border-color: orange;
+}
