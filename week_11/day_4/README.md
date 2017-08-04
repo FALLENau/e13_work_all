@@ -1,4 +1,4 @@
-### Html Accessibility and JS Canvas prac
+### Html Accessibility, JS Canvas prac and JS Charts
 
 
 ###webpage elements
@@ -25,4 +25,14 @@ and
 using Timestamps to check how quick a form is completed, then recover the ip so to block the bot(can block ip of bot?)
 ```
 
+```
+
+### JS Canvas
+
+```js
+```
+
+###JS Charts!
+
+```js
 ```
