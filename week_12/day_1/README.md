@@ -27,16 +27,28 @@ What things you need to install the software and how to install them
 4. npm body-parser
 5. Insomnia REST Client
 
+#### Tips for terminal
+in your terminal you can use the alias 'i' for install on npm and other program frameworks like so
+```sh
+npm i --save express
+```
+#### Tips of debugging
+```js
+function = function(event) {
+  console.log(event)
+}
+```
+
 ## Getting Started Part1
 
-make a folder(mkdir) in your terminal for your project, name it whatever you like. Then touch
-```
-server.js
+make a folder(mkdir) in your terminal for your project, name it whatever you like. Then make
+```sh
+touch server.js
 ```
 in your project folder
 <br>
 Once your done use NPM commands below to install your Dependency
-```
+```sh
 npm init; npm install --save express
 ```
 When the command start hit return till the end.
@@ -57,17 +69,17 @@ app.listen(3000, function(){
 })
 ```
 and start your server!
-```
+```sh
 node server.js
 ```
 Your should get the msg
-```
-App running on port 3000
+```sh
+App running on port: 3000
 ```
 And tada! go to your url:
-```
-http://localhost:3000
-```
+
+[localhost 3000](http://localhost:3000)
+
 and see your work!
 
 ```js
@@ -78,14 +90,14 @@ and see your work!
 <br>
 ## Nodemon install
 close your server down with ^c in terminal (" ^ " refers the the control key on mac) once server is stopped do the next step in terminal
-```
-npm install nodemon -g
+```sh
+npm i nodemon -g
 ```
 -g refers to installing the dependencies in your golbal file network so it can be used anywhere.
 <br>
 Once nodemon is installed you can start it by
-```
-nodemon server.js
+```sh
+$nodemon server.js
 ```
 Nodemon will now update your page dynamically(i.e it will pickup any saves within your file system that is being used)
 
@@ -110,8 +122,9 @@ First create a 'index.html' file in your project folder and add this code to it
 ```
 It's important to notice that (link rel="stylesheet" href="style.css") in the (head) tag is required to call the "style.css" file we will make shortly.
 
-
+<br>
 next step is to create a 'public' folder within your project folder. It must be called 'public' other wise Express won't understand it.
+<br>
 
 Then change your server.js code to take into count the changes we have made, this is what it will look like
 
@@ -230,15 +243,60 @@ blah blah
 ```
 
 ## Web bundles!
+To get started we need to open the bundle.zip then cd into 'bundled'
 
-
-
-```js
-
+install npm webpack
+```
+$npm i --save-dev webpack
 ```
 
-Add additional notes about how to deploy this on a live system
 
+
+add webpack install updates to package.json file by adding
+```json
+,
+"bundle": "webpack -w"
+```
+just under
+```json
+"scripts": {
+  "start": "node server.js"
+  /*put code here*/
+}
+```
+so it will look like this
+```json
+{
+  "name": "review_site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "bundle": "webpack -w"
+  }
+}
+```
+make webpack.config.js file in bundle folder
+<br>
+webpack.config file
+```js
+var config = {
+  entry: __dirname + '/client/src/app.js',
+  output: {
+      filename: 'bundle.js',
+      path: __dirname + '/client/build'
+  }
+}
+
+module.exports = config
+```
+$bundle file with webpack
+```
+npm run bundle
+```
+and load your localhost:3000!
+<br>
 
 ## Deployment
 
