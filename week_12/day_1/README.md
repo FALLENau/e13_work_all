@@ -147,13 +147,13 @@ your page will change to the css input, but wait thats not all!
 
 if you change any parts of your included html, css, js and other files within your project, your server will pickup any changes and add them for you, and all you need to do is refresh your page.
 
-### Part One of learning objectives done
+#### Part One of learning objectives done!
 ---
-### Understanding RESTful Objects
+## Understanding RESTful Objects
 
 Explain what these tests test and why
 
-## Startpoint
+### Startpoint
 Make sure you do these in order(see [7 RESTful ROUTS](http://restfulrouting.com/#introduction) for details)
 
 Make an array for testing
@@ -229,7 +229,7 @@ blah blah
 
 ```
 
-## Deployment
+## Web bundles!
 
 
 

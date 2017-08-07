@@ -2,12 +2,14 @@ var Films = function(){
 
   var review1 = new Review({
     comment: "It's not even a thing. What just happened. I want my life back.",
-    rating: 1
+    rating: 1,
+    author: "Darren"
   });
 
   var review2 = new Review({
     comment: "Pew pew pew lightsabers space cowboys whoot what's not to love",
-    rating: 100
+    rating: 100,
+    author: "Sandy"
   });
 
   var film1 = new Film({
