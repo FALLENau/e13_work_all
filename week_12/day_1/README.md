@@ -2,29 +2,39 @@
 
 In this practice I will be build a npm express server from scratch
 
+learning objectives:
+1. Know what express And Nodemon are
+2. Understand how to define route in Express
+3. Be able to create a basic Express Server
+4. Be able to send an index.html and json back from our server
+
 
 ### Prerequisites
 
 What things you need to install the software and how to install them
 
-```
-Give examples
-```
+1. npm
+2. node Js
+3. text editor
+4. JSON Formatter (install on your browser)
+
 ## Getting Started
 
-make a folder($mkdir) for your project, name it whatever you like. Then touch
+make a folder(mkdir) in your terminal for your project, name it whatever you like. Then touch
 ```
 server.js
 ```
-Then use NPM to install your Dependency
+in your project folder
+
+Once your done use NPM commands below to install your Dependency
 ```
 npm init; npm install --save express
 ```
-Once
+When the command start hit return till the end.
 
 ### Building your server.js file
 
-code this into your server
+code this into your server.js file
 ```js
 var express = require('express')
 var app = express()
@@ -45,17 +55,58 @@ Your should get the msg
 ```
 App running on port3000
 ```
-And tada!
+And tada! go to your url:
+```
+http://localhost:3000
+```
+and see your work!
+
+```js
+{
+"data: 'Sup!'"
+}
+```
+
 ## Nodemon install
-
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+close your server down with ^c in terminal (" ^ " refers the the control key on mac) once server is stopped do the next step in terminal
 ```
-Give an example
+npm install nodemon -g
 ```
+-g refers to installing the dependencies in your golbal file network so it can be used anywhere.
+
+Once nodemon is installed you can start it by
+```
+nodemon server.js
+```
+Nodemon will now update your page dynamically(i.e it will pickup any saves within your file system that is being used)
+
+
+### Adding your dynamic public folder
+
+Now that your server is dynamic we will need to add some features so it can keep up with the changes
+
+
+first step is to create a public folder within your project folder. Then change your server.js code to look like this
+
+```js
+var express = require('express')
+var app = express()
+
+// app.get('/', function(req, res){
+//   res.json({data: 'Sup!'})
+// })//remove this block from your file
+
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/index.html')
+})
+
+app.listen(3000, function(){
+  console.log('App running on port: ' + this.address().port)
+})
+
+app.use(express.static('public'))
+```
+and there you go!
 
 ### And coding style tests
 
