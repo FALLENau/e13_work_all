@@ -14,6 +14,8 @@ learning objectives part2:
 3. Understand the routes object
 4. be able to create a RESTful api in Express
 
+learning objectives part2
+
 
 ### Prerequisites
 
@@ -32,13 +34,13 @@ make a folder(mkdir) in your terminal for your project, name it whatever you lik
 server.js
 ```
 in your project folder
-
+<br>
 Once your done use NPM commands below to install your Dependency
 ```
 npm init; npm install --save express
 ```
 When the command start hit return till the end.
-
+<br>
 ### Building your server.js file
 
 code this into your server.js file
@@ -60,7 +62,7 @@ node server.js
 ```
 Your should get the msg
 ```
-App running on port3000
+App running on port 3000
 ```
 And tada! go to your url:
 ```
@@ -73,14 +75,14 @@ and see your work!
 "data: 'Sup!'"
 }
 ```
-
+<br>
 ## Nodemon install
 close your server down with ^c in terminal (" ^ " refers the the control key on mac) once server is stopped do the next step in terminal
 ```
 npm install nodemon -g
 ```
 -g refers to installing the dependencies in your golbal file network so it can be used anywhere.
-
+<br>
 Once nodemon is installed you can start it by
 ```
 nodemon server.js
@@ -91,7 +93,7 @@ Nodemon will now update your page dynamically(i.e it will pickup any saves withi
 ### Adding your dynamic public folder
 
 Now that your server is dynamic we will need to add some features so it can keep up with the changes.
-
+<br>
 First create a 'index.html' file in your project folder and add this code to it
 ```html
 <!DOCTYPE html>
@@ -106,7 +108,7 @@ First create a 'index.html' file in your project folder and add this code to it
   </body>
 </tml>
 ```
-It's important to notice '<link rel="stylesheet" href="style.css">' in the <head> tag is required to call the "style.css" file we will make shortly.
+It's important to notice that (link rel="stylesheet" href="style.css") in the (head) tag is required to call the "style.css" file we will make shortly.
 
 
 next step is to create a 'public' folder within your project folder. It must be called 'public' other wise Express won't understand it.
@@ -151,11 +153,100 @@ if you change any parts of your included html, css, js and other files within yo
 
 Explain what these tests test and why
 
+## Startpoint
+Make sure you do these in order(see [7 RESTful ROUTS](http://restfulrouting.com/#introduction) for details)
+
+Make an array for testing
+```js
+var cats = ["Billy Tiger", "British Shorthair", "Siamese"]
 ```
-Give an example
+[Billy](https://www.instagram.com/p/BNSD8svg-ug/) is my cat :)
+
+then make your first requestful route, which looks like this!
+
+```js
+catRouter.post('/cats', function(req, res){
+  cats.push(req.body.cat)
+  res.json({data: cats})
+})
+```
+This will allow you to create a cat onto the 'cats' array
+<br>
+
+```js
+catRouter.put('/cats/:id', function(req, res){
+  cats[req.params.id] = req.body.cat
+  res.json({date: cats})
+})
+```
+
+```js
+catRouter.delete('/cats/:id', function(req, res){
+  cats.splice(req.params.id, 1)
+  res.json({date: cats})
+})
+```
+
+```js
+catRouter.get('/cats/:id', function(req, res){
+  res.json({data: cats[req.params.id]})
+})
+```
+
+```js
+catRouter.get('/cats', function(req, res){
+  res.json(cats)
+})
+// module.exprorts = catRouter
+```
+
+## Make controllers for your Routes
+Start by making a foulder in your project folder called 'controllers', then touch 3 files into it called "cats.js", "dogs.js" and "index.js".
+
+first things first, collect the data related to cats in the server.js file and put
+
+```js
+
+```
+blah blah
+
+```js
+
+```
+blah blah
+
+```js
+
+```
+blah blah
+
+```js
+
+```
+blah blah
+
+```js
+
 ```
 
 ## Deployment
+
+
+
+```js
+
+```
+
+Add additional notes about how to deploy this on a live system
+
+
+## Deployment
+
+
+
+```js
+
+```
 
 Add additional notes about how to deploy this on a live system
 
