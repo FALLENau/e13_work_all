@@ -2,23 +2,30 @@
 
 In this practice I will be build a npm express server from scratch
 
-learning objectives:
+learning objectives part1:
 1. Know what express And Nodemon are
 2. Understand how to define route in Express
 3. Be able to create a basic Express Server
 4. Be able to send an index.html and json back from our server
+
+learning objectives part2:
+1. Know how express does routes and routing
+2. Understand what body-parser does
+3. Understand the routes object
+4. be able to create a RESTful api in Express
 
 
 ### Prerequisites
 
 What things you need to install the software and how to install them
 
-1. npm
-2. node Js
-3. text editor
-4. JSON Formatter (install on your browser)
+1. npm + nodejs
+2. text editor
+3. JSON Formatter (install on your browser)
+4. npm body-parser
+5. Insomnia REST Client
 
-## Getting Started
+## Getting Started Part1
 
 make a folder(mkdir) in your terminal for your project, name it whatever you like. Then touch
 ```
@@ -83,10 +90,28 @@ Nodemon will now update your page dynamically(i.e it will pickup any saves withi
 
 ### Adding your dynamic public folder
 
-Now that your server is dynamic we will need to add some features so it can keep up with the changes
+Now that your server is dynamic we will need to add some features so it can keep up with the changes.
+
+First create a 'index.html' file in your project folder and add this code to it
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>my express</title>
+  </head>
+  <body>
+    <h1>woah dude</h1>
+  </body>
+</tml>
+```
+It's important to notice '<link rel="stylesheet" href="style.css">' in the <head> tag is required to call the "style.css" file we will make shortly.
 
 
-first step is to create a public folder within your project folder. Then change your server.js code to look like this
+next step is to create a 'public' folder within your project folder. It must be called 'public' other wise Express won't understand it.
+
+Then change your server.js code to take into count the changes we have made, this is what it will look like
 
 ```js
 var express = require('express')
@@ -104,11 +129,25 @@ app.listen(3000, function(){
   console.log('App running on port: ' + this.address().port)
 })
 
-app.use(express.static('public'))
+//add this
+app.use(express.static('public'))//here is where we see the *magic*!
 ```
-and there you go!
+now create a 'style.css' within the public folder. open us you css file and add this code
+```css
+body {
+  background-color: #333;
+  color: orange;
+}
+```
+go back to your webpage and refresh and see the magic!
 
-### And coding style tests
+your page will change to the css input, but wait thats not all!
+
+if you change any parts of your included html, css, js and other files within your project, your server will pickup any changes and add them for you, and all you need to do is refresh your page.
+
+### Part One of learning objectives done
+---
+### Understanding RESTful Objects
 
 Explain what these tests test and why
 
@@ -122,23 +161,16 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+* [atom](https://atom.io/) - the lightweight text editor
+* [npm](https://www.npmjs.com/) - package manager for JavaScript
+* [Json Formatter](https://github.com/callumlocke/json-formatter) - a great little formatting extension for browsers
+* [Insomnia](https://insomnia.rest/) - a platform to test your RESTful routes with
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Reece Jones**  - [lost-in-Code](https://github.com/lost-in-Code-au)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/lost-in-Code-au/JS_sever_prac/graphs/contributors) who participated in this project.
 
 ## License
 
@@ -146,6 +178,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* Thanks to google for allowing me to use there code
+* Thanks to the instructors at Codeclan for your instruction
+* Inspiration: Billy my cat making me work hate to bring home the cat food
+* and my wife for just being her
