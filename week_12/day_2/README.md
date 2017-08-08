@@ -59,7 +59,9 @@ ect
 basically in the simplest idea of NoSQL is anything not SQL based database language
 
 <br>
+
 ### Name Reference Table
+
 |SQL| to |NoSql|
 |---|---|--|
 |Database|=>|Database|
