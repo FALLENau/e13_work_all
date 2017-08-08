@@ -38,6 +38,14 @@ function = function(event) {
   console.log(event)
 }
 ```
+also works in RESTful requests
+```js
+filmsRouter.post('/', function(req, res){
+  console.log(req.body)
+  films.push(req.body.film)
+  res.json({data: films})
+})
+```
 
 ## Getting Started Part1
 
@@ -164,7 +172,8 @@ if you change any parts of your included html, css, js and other files within yo
 ---
 ## Understanding RESTful Objects
 
-Explain what these tests test and why
+Ok unzip the "express_restful_start_cats.zip" file as your startpoint.
+
 
 ### Startpoint
 Make sure you do these in order(see [7 RESTful ROUTS](http://restfulrouting.com/#introduction) for details)
@@ -173,7 +182,7 @@ Make an array for testing
 ```js
 var cats = ["Billy Tiger", "British Shorthair", "Siamese"]
 ```
-[Billy](https://www.instagram.com/p/BNSD8svg-ug/) is my cat :)
+[Billy Tiger](https://www.instagram.com/p/BNSD8svg-ug/) is my cat :)
 
 then make your first requestful route, which looks like this!
 
@@ -183,7 +192,7 @@ catRouter.post('/cats', function(req, res){
   res.json({data: cats})
 })
 ```
-This will allow you to create a cat onto the 'cats' array
+This will allow you to create a cat and push him onto the 'cats' array
 <br>
 
 ```js
@@ -192,6 +201,9 @@ catRouter.put('/cats/:id', function(req, res){
   res.json({date: cats})
 })
 ```
+This will allow you to update a cat by id
+<br>
+
 
 ```js
 catRouter.delete('/cats/:id', function(req, res){
@@ -199,19 +211,25 @@ catRouter.delete('/cats/:id', function(req, res){
   res.json({date: cats})
 })
 ```
+This will allow you to delete a cat by id on the cats array
+<br>
+
 
 ```js
 catRouter.get('/cats/:id', function(req, res){
   res.json({data: cats[req.params.id]})
 })
 ```
+This will allow you to get a cat by id on the cats array
+<br>
 
 ```js
 catRouter.get('/cats', function(req, res){
   res.json(cats)
 })
-// module.exprorts = catRouter
 ```
+This will allow you to get all the cats on the cats array
+<br>
 
 ## Make controllers for your Routes
 Start by making a foulder in your project folder called 'controllers', then touch 3 files into it called "cats.js", "dogs.js" and "index.js".
@@ -246,22 +264,21 @@ blah blah
 To get started we need to open the bundle.zip then cd into 'bundled'
 
 install npm webpack
-```
-$npm i --save-dev webpack
+```sh
+npm i --save-dev webpack
 ```
 
 
 
 add webpack install updates to package.json file by adding
 ```json
-,
-"bundle": "webpack -w"
+, "bundle": "webpack -w"
 ```
-just under
+just under(don't forget the ',')
 ```json
 "scripts": {
   "start": "node server.js"
-  /*put code here*/
+  |--!put code here--|
 }
 ```
 so it will look like this
@@ -291,8 +308,8 @@ var config = {
 
 module.exports = config
 ```
-$bundle file with webpack
-```
+bundle file with webpack
+```sh
 npm run bundle
 ```
 and load your localhost:3000!
@@ -327,7 +344,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Thanks to google for allowing me to use there code
+* Thanks to guys who maintain JavaScript and for allowing there code to be Opensauce
 * Thanks to the instructors at Codeclan for your instruction
 * Inspiration: Billy my cat making me work hate to bring home the cat food
 * and my wife for just being her
