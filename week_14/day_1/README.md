@@ -238,24 +238,105 @@ console.log(f, l);
 
 ### Setting up REACT
 
-```sh
+un-zip webpack_start_point then cd into client folder
+this will install and save the npm dependencies and react/react-dom
+<br>
+first of all you'll need to change the webpack config file in client folder to look like this:
+```js
+var config = {
+  entry: __dirname + "/src/index.js",
+  output: {
+    filename: "bundle.js",
+    path: __dirname + "/build"
+  },
+  devtool: "source-map"
+}
+```
+then install
 
+```sh
+npm install --save react react-dom
+```
+and just for good measure do
+```sh
+npm install
 ```
 
 
 ```sh
+webpack -w
+```
 
+
+```js
+var React = require('react')
+var ReactDom = require('react-dom')
+
+window.onload = function(){
+  var header = React.createElement('h1', null, 'Welcome to React!')
+
+  appDiv = document.querySelector('#app')
+
+  ReactDom.render(
+    header,
+    appDiv
+  )
+}
+```
+### babel
+
+
+```sh
+ npm install --save-dev babel-loader babel-core bable-preset-react
+ ```
+
+<br>
+
+
+```js
+devtool: "source-map",
+resolve: {
+  extensions: ['.js', '.jsx']
+},
+module:{
+  rules: [
+  {
+    test: /\.jsx?$/,
+    exclude: /(node_modules)/,
+    loader: 'babel-loader',
+    query: {
+      presets: ['react']
+    }
+  }
+  ]
+}
+```
+
+
+## Objectives - React Piggy Bank
+
+1. create a single component App
+2. intro to props and state
+3. install the react dev-tools and learn how they can be useful
+
+### getting started
+
+un-zip react-start-point.zip, cd into react-start-point folder and
+
+```sh
+npm install
 ```
 
 
 ```sh
-
+touch PiggyBank.jsx
 ```
 
 
 ```js
 
 ```
+
 
 ```js
 
