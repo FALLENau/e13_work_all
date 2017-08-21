@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import CommentContainer from './containers/CommentContainer.jsx';
+
 window.onload = function(){
   ReactDOM.render(
-    <h1> App Started </h1>,
+    <CommentContainer />,
     document.getElementById('app')
   );
 }
