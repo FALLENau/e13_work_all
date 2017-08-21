@@ -288,7 +288,7 @@ window.onload = function(){
 
 ```sh
  npm install --save-dev babel-loader babel-core bable-preset-react
- ```
+```
 
 <br>
 
@@ -326,18 +326,111 @@ un-zip react-start-point.zip, cd into react-start-point folder and
 ```sh
 npm install
 ```
+then cd into client and
+```sh
+npm install
+```
+<br>
+
 
 
 ```sh
 touch PiggyBank.jsx
 ```
 
-
+PiggyBank.jsx
 ```js
+import React from 'react'
 
+class PiggyBank extends React.Component {
+  render() {
+    return(
+      <div className="bank-box">
+        <h1>{this.props.title}</h1>
+      </div>
+    )
+  }
+}
+
+export default PiggyBank
+```
+
+app.js
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import PiggyBank from './components/PiggyBank'
+
+window.onload = function(){
+  ReactDOM.render(
+    <PiggyBank title="Zsolt's Savings Pig"/>,
+    document.querySelector('#app')
+  );
+}
+
+```
+final app.js file
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import PiggyBank from './components/PiggyBank'
+
+window.onload = function(){
+  ReactDOM.render(
+    <PiggyBank title="Zsolt's Savings Pig" owner="Jarrod" changeAmmount={5}/>,
+    document.querySelector('#app')
+  );
+}
 ```
 
 
+Final ver of PiggyBank.jsx
 ```js
+import React from 'react'
+import PropTypes from 'prop-types'
+
+class PiggyBank extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state ={
+
+      total: 0
+    }
+  }
+
+  addToSavings() {
+    this.setState({
+      total: this.state.total + 7987
+    })
+  }
+
+  removeFromSavings() {
+    this.setState({
+      total: this.state.total - 7136
+    })
+  }
+
+  render() {
+    return(
+      <div className="bank-box">
+        <h1>{this.props.title}</h1>
+        <h2>{this.props.owner}</h2>
+        <h2>Savings: {this.state.total}</h2>
+        <button onClick={()=>{this.addToSavings()}}>Add</button>
+        <button onClick={()=>{this.removeFromSavings()}}>Take</button>
+      </div>
+    )
+  }
+}
+
+PiggyBank.propTypes = {
+  title: PropTypes.string.isRequired
+}
+
+export default PiggyBank
 
 ```
+
+# part 3
