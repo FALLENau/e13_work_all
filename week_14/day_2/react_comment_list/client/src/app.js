@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import MovieContainer from './containers/MovieContainer.jsx';
-// import MovieList from './components/Movielist.jsx';
+import CommentContainer from './containers/CommentContainer.jsx';
+// import CommentList from './components/Commentlist.jsx';
 
 window.onload = function(){
   ReactDOM.render(
-    <MovieContainer />,
+    <CommentContainer />,
     document.getElementById('app')
   );
 }
