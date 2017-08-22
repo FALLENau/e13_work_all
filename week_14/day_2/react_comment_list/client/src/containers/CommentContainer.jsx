@@ -1,5 +1,6 @@
 import React from 'react'
-import CommentList from '../components/CommentList.jsx';
+import CommentList from '../components/CommentList.jsx'
+import CommentForm from './CommentForm.jsx'
 
 const sampleData = [
   { id: 1, author: "Darren Green", text: "If you use a forEach in JSX, I'll kill ya"},
@@ -8,17 +9,25 @@ const sampleData = [
 ]
 
 class CommentContainer extends React.Component {
-
   constructor(props) {
     super(props)
+    this.handleCommentSubmit = this.handleCommentSubmit.bind(this)
     this.state = {
       data: sampleData
     }
   }
 
+  handleCommentSubmit(comment) {
+    comment.id = Date.now()
+    const newComments = this.state.data.concat([comment])
+    this.setState({data: newComments})
+  }
+
   render() {
     return (
       <div>
+        Add a Comment
+        <CommentForm onCommentSubmit={this.handleCommentSubmit} />
         <h1>Welcome to the Pain Train!</h1>
         <CommentList data={ this.state.data } />
       </div>

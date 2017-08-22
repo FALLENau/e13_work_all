@@ -6,3 +6,12 @@ body {
 li {
   list-style: none;
 }
+
+.comment-form {
+  padding: 5px;
+  margin: 5px;
+}
+
+.comment-form input {
+  margin: 5px;
+}
