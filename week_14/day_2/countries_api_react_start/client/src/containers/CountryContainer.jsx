@@ -9,6 +9,12 @@ class CountryContainer extends React.Component {
       countries: [],
       focusCountry: null
     }
+
+    this.setFocusCountry = this.setFocusCountry.bind(this)
+  }
+
+  setFocusCountry(country) {
+    this.setState({ focusCountry: country })
   }
 
   componentDidMount() {
@@ -16,7 +22,8 @@ class CountryContainer extends React.Component {
       .then(response => response.json())
       .then((data) => {
         this.setState({
-          countries: data
+          countries: data,
+          focusCountry: data[0]
         })
         console.log(data);
       })
@@ -30,8 +37,11 @@ class CountryContainer extends React.Component {
     return (
       <div>
         <h2>Country Container</h2>
-        <CountrySelector countries={this.state.countries} />
-        <CountryDetail />
+        <CountrySelector
+          countries={ this.state.countries }
+          selectCountry={ this.setFocusCountry }
+        />
+        <CountryDetail country={ this.state.focusCountry } />
       </div>
     )
   }

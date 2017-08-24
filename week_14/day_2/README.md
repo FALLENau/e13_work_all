@@ -123,7 +123,7 @@ there is debate about if we will continue using "Component Will Mount" since the
 Render with look at what it needs to look though what it needs and will go and repeat the lifecycle within any other children files it needs to.
 
 ### Component Did Mount
-"Component Did Mount" will give you the response received but the rendering.
+"Component Did Mount" will give you the response received by the rendering.
 
 #### others
 

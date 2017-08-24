@@ -3,9 +3,10 @@ import CommentList from '../components/CommentList.jsx'
 import CommentForm from './CommentForm.jsx'
 
 const sampleData = [
-  { id: 1, author: "Darren Green", text: "If you use a forEach in JSX, I'll kill ya"},
+  { id: 1, author: "Darren Green", text: "If you forget to export in JSX, I'll kill ya"},
   { id: 2, author: "Reece Jones", text: "This be wack yo"},
-  { id: 3, author: "Darren Green", text: "If you use a forget to use a key in JSX, I'll kill ya"}
+  { id: 3, author: "Darren Green", text: "If you use a forget to use a key in JSX, I'll kill ya"},
+  { id: 3, author: "Glen Young", text: "I would say that!"}
 ]
 
 class CommentContainer extends React.Component {
