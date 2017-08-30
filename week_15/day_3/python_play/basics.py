@@ -62,11 +62,11 @@
 #
 # print(person.values())
 
-######################
+###################### import depedncies
 
-import numpy as np
-
-my_array1 = np.array([2,3,4,5])
-my_array2 = np.array([6,7,8,9])
-
-print(my_array1 * my_array2)
+# import numpy as np
+#
+# my_array1 = np.array([2,3,4,5])
+# my_array2 = np.array([6,7,8,9])
+#
+# print(my_array1 * my_array2)
